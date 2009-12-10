@@ -3335,6 +3335,43 @@
 			<Item><Key>Status</Key><Translate>regrinfo.domain.status</Translate></Item>
 			<Item><Key>Original Creation Date</Key><Translate>regrinfo.domain.created</Translate></Item>
 			<Item><Key>Expiration Date</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>Nameserver</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.krnic.net" parser="A" linestart="^\s*Domain\sName\s*:">
+		<List>
+			<Item><Key>Domain Name</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Registrant</Key><Translate>regrinfo.owner.name</Translate></Item>
+			<Item><Key>Registrant Address</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Zip Code</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Administrative Contact(AC)</Key><Translate>regrinfo.admin.name</Translate></Item>
+			<Item><Key>AC E-Mail</Key><Translate>regrinfo.admin.email</Translate></Item>
+			<Item><Key>AC Phone Number</Key><Translate>regrinfo.admin.phone</Translate></Item>
+			<Item><Key>Authorized Agency</Key><Translate>regyinfo.registrar</Translate></Item>
+			<Item><Key>Registered Date</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Last updated Date</Key><Translate>regrinfo.domain.updated</Translate></Item>
+			<Item><Key>Expiration Date</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>Host Name</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.jprs.jp" parser="A" linestart="^\s*Domain\sInformation:">
+		<Contacts>
+			<Item><Key>[Postal Address]</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>[Phone]</Key><Translate>break</Translate></Item>
+		</Contacts>
+		<List>
+			<Item><Key>[Domain Name]</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>[Status]</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>[Registrant]</Key><Translate>regrinfo.owner.name</Translate></Item>
+			<Item><Key>[Name]</Key><Translate>regrinfo.owner.name</Translate></Item>
+			<Item><Key>[Postal code]</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>[Email]</Key><Translate>regrinfo.owner.email</Translate></Item>
+			<Item><Key>[Phone]</Key><Translate>regrinfo.owner.phone</Translate></Item>
+			<Item><Key>[Fax]</Key><Translate>regrinfo.owner.fax</Translate></Item>
+			<Item><Key>[Created on]</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>[Last Updated]</Key><Translate>regrinfo.domain.updated</Translate></Item>
+			<Item><Key>[Expires on]</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>[Name Server]</Key><Translate>regrinfo.domain.nserver</Translate></Item>
 		</List>
 	</Translates>
 </JWHOIS>

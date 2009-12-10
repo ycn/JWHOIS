@@ -40,18 +40,14 @@ public class WhoisMap {
 	 *  
 	 *  - rawdata
 	 */
-
-	// line type B : key = group(1); value = group(2)
-	public final static String	REGEX_LINEB	= "^\\s*([^:]+):([^/][^/].+)$";
-	// line type C : key = group(1); value = group(2)
-	public final static String	REGEX_LINEC	= "^\\s*([^\\.]+)\\.+(.+)$";
+	
+	// line type B : key = group(1); value = group(3)
+	private final static String	REGEX_LINEB	= "^\\s*([\u0000-\u0039\u003B-\u007E]+)\\s*(:|[\\.]{3,}|\\s{5,})\\s*([^\\/][^\\/].+)\\s*$";
 
 	private static Pattern		pnLineB;
-	private static Pattern		pnLineC;
 
 	static {
 		pnLineB = Pattern.compile( REGEX_LINEB, Pattern.CASE_INSENSITIVE );
-		pnLineC = Pattern.compile( REGEX_LINEC, Pattern.CASE_INSENSITIVE );
 	}
 
 	private Map<String, Object>	whoisMap;
@@ -137,7 +133,7 @@ public class WhoisMap {
 							set( t.substring( 2 ), key + ": " + val );
 						}
 						else {
-							set( t, val );
+							set( t, val, true );
 						}
 					}
 				}
@@ -185,7 +181,7 @@ public class WhoisMap {
 			if (!Utility.isEmpty( lineOne )) {
 				Matcher matcher = pnLineB.matcher( lineOne );
 				if (matcher.find()) {
-					String val = matcher.group( 2 );
+					String val = matcher.group( 3 );
 					if (!Utility.isEmpty( val ))
 						list.add( val );
 				}
@@ -203,10 +199,10 @@ public class WhoisMap {
 					if (contactInfo.containsKey( key )) {
 						cache = contactInfo.get( key );
 						if (cache.startsWith( "k|" )) {
-							map.set( cache.substring( 2 ), key + ": " + m.group( 2 ).trim(), true );
+							map.set( cache.substring( 2 ), key + ": " + m.group( 3 ).trim(), true );
 						}
 						else {
-							map.set( cache, m.group( 2 ).trim(), true );
+							map.set( cache, m.group( 3 ).trim(), true );
 						}
 						continue;
 					}
@@ -282,7 +278,7 @@ public class WhoisMap {
 			// We only takes the line matches REGEX_BLINE
 			Matcher m = pnLineB.matcher( line );
 			if (m.find()) {
-				rdMap.set( m.group( 1 ).trim().toLowerCase(), m.group( 2 ).trim(), true );
+				rdMap.set( m.group( 1 ).trim().toLowerCase(), m.group( 3 ).trim(), true );
 			}
 		}
 		return rdMap.getMap();
@@ -318,7 +314,7 @@ public class WhoisMap {
 			Matcher m = pnLineB.matcher( line );
 			if (m.find()) {
 				String key = m.group( 1 ).trim();
-				String val = m.group( 2 ).trim();
+				String val = m.group( 3 ).trim();
 				if (!Utility.isEmpty( blockHead ) && !Utility.isEmpty( contactHandle )
 						&& key.toLowerCase().equals( blockHead )) {
 					cList = new ArrayList<String>();
@@ -366,10 +362,10 @@ public class WhoisMap {
 	private Map<String, Object> parseC(List<String> rawdata) {
 		WhoisMap rdMap = new WhoisMap();
 		for (String line : rawdata) {
-			Matcher m = pnLineC.matcher( line );
+			Matcher m = pnLineB.matcher( line );
 			if (m.find()) {
 				String key = m.group( 1 ).trim();
-				String val = m.group( 2 ).trim();
+				String val = m.group( 3 ).trim();
 				rdMap.set( key.toLowerCase(), val, true );
 			}
 		}

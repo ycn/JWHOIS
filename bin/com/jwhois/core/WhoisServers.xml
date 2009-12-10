@@ -24,6 +24,8 @@
 		<SERVER><KEY>es</KEY><URL>https://www.nic.es/esnic/esn/verValidacionWhoisAction?dominio={domain}</URL></SERVER>
 		<SERVER><KEY>fm</KEY><URL>http://www.dot.fm/query_whois.cfm?domain={domain}&amp;tld=fm</URL></SERVER>
 		<SERVER><KEY>jobs</KEY><URL>jobswhois.verisign-grs.com</URL></SERVER>
+		<SERVER><KEY>jp</KEY><URL>whois.jprs.jp?{domain}/e</URL></SERVER>
+		<SERVER><KEY>kr</KEY><URL>whois.krnic.net</URL></SERVER>
 		<SERVER><KEY>la</KEY><URL>whois.centralnic.net</URL></SERVER>
 		<SERVER><KEY>gr</KEY><URL></URL></SERVER>
 		<SERVER><KEY>gs</KEY><URL>http://www.adamsnames.tc/whois/?domain={domain}.gs</URL></SERVER>

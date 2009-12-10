@@ -276,7 +276,7 @@ public class WhoisClient {
 		int posSlash = addr.indexOf( '/' );
 		int posArgs = addr.indexOf( '?' );
 		int posAs = posSlash;
-		if (posSlash != -1) {
+		if (posSlash != -1 && posSlash < posArgs) {
 			queryStr = addr.substring( posSlash );
 		}
 		else {
