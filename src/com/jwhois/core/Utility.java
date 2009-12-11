@@ -1,7 +1,9 @@
 package com.jwhois.core;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.InetAddress;
 import java.net.MalformedURLException;
@@ -18,6 +20,7 @@ import javax.net.ssl.SSLSession;
 import com.jwhois.core.Logger.LEVEL;
 
 public class Utility {
+	public static final String	REGEXP_HTMLUTIL		= "<[^>]+?>";
 	public static final String	REGEXP_BLANK		= "\\s*";
 	public static final String	REGEXP_SLD_IDN		= "(xn--)?[a-z0-9](([a-z0-9-]+)?[a-z0-9])?";
 	public static final String	REGEXP_TLD			= "(\\.[a-z]{2,10})(\\.[a-z]{2,3})?";
@@ -133,6 +136,8 @@ public class Utility {
 	 */
 	public static String getHostName(String url) {
 		String host = "";
+		if (url.indexOf( "://" ) == -1)
+			return url;
 		URL u;
 		try {
 			u = new URL( url );
@@ -214,6 +219,56 @@ public class Utility {
 				e.printStackTrace();
 			System.out.println( " (END) ####" );
 		}
+	}
+
+	private static String skipLine(String line) {
+		String l = "";
+		if (line.indexOf( "<" ) >= 0 && line.indexOf( ">" ) == -1)
+			return l;
+		if (line.indexOf( ">" ) >= 0 && line.indexOf( "<" ) == -1)
+			return l;
+		return line;
+	}
+
+	/**
+	 * makes the given html stream clean
+	 * 
+	 * @param in
+	 * @return clean list of lines
+	 */
+	public static List<String> cleanHtml(InputStream in) {
+		List<String> list = new ArrayList<String>();
+
+		try {
+			BufferedReader br = new BufferedReader( new InputStreamReader( in, "UTF-8" ) );
+			String line = null;
+			boolean skip = false;
+			while ((line = br.readLine()) != null) {
+				line = line.replaceAll( REGEXP_HTMLUTIL, "" );
+				if (Utility.isEmpty( line ))
+					continue;
+				if (skip && line.indexOf( "-->" ) >= 0) {
+					skip = false;
+					continue;
+				}
+				if (!skip && line.indexOf( "<!--" ) >= 0) {
+					skip = true;
+				}
+				if (skip) {
+					continue;
+				}
+				line = skipLine( line );
+				if (!Utility.isEmpty( line ))
+					list.add( line );
+			}
+
+			br.close();
+		}
+		catch (Exception e) {
+			// do nothing
+		}
+
+		return list;
 	}
 
 }

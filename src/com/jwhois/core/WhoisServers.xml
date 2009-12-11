@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <JWHOIS>
 	<SpecialList>
+		<SERVER><KEY>aero</KEY><URL>whois.aero</URL></SERVER>
+		<SERVER><KEY>asia</KEY><URL>whois.nic.asia</URL></SERVER>
+		<SERVER><KEY>biz</KEY><URL>whois.biz</URL></SERVER>
+		<SERVER><KEY>cat</KEY><URL>whois.cat</URL></SERVER>
+		<SERVER><KEY>coop</KEY><URL>whois.nic.coop</URL></SERVER>
+		<SERVER><KEY>edu</KEY><URL>whois.educause.net</URL></SERVER>
+		<SERVER><KEY>gov</KEY><URL>break</URL></SERVER>
+		<SERVER><KEY>info</KEY><URL>whois.afilias.info</URL></SERVER>
+		<SERVER><KEY>int</KEY><URL>whois.iana.org</URL></SERVER>
+		<SERVER><KEY>mil</KEY><URL>break</URL></SERVER>
+		<SERVER><KEY>mobi</KEY><URL>whois.dotmobiregistry.net</URL></SERVER>
+		<SERVER><KEY>museum</KEY><URL>whois.museum</URL></SERVER>
+		<SERVER><KEY>name</KEY><URL>whois.nic.name</URL></SERVER>
+		<SERVER><KEY>org</KEY><URL>whois.pir.org</URL></SERVER>
+		<SERVER><KEY>pro</KEY><URL>whois.registrypro.pro</URL></SERVER>
+		<SERVER><KEY>travel</KEY><URL>http://www.whois.travel/whois.cgi?TLD=travel&amp;dn={domain}&amp;TYPE=DOMAIN</URL></SERVER>
+		
+		<SERVER><KEY>ac</KEY><URL>whois.nic.ac</URL></SERVER>
+		<SERVER><KEY>cd</KEY><URL>whois.cd</URL></SERVER>
+		<SERVER><KEY>ly</KEY><URL>whois.nic.ly</URL></SERVER>
+		<SERVER><KEY>mu</KEY><URL>whois.nic.mu</URL></SERVER>
+		<SERVER><KEY>na</KEY><URL>whois.na-nic.com.na</URL></SERVER>
+		<SERVER><KEY>re</KEY><URL>whois.nic.fr</URL></SERVER>
+		<SERVER><KEY>sc</KEY><URL>whois2.afilias-grs.net</URL></SERVER>
+		<SERVER><KEY>sh</KEY><URL>whois.nic.sh</URL></SERVER>
+		<SERVER><KEY>st</KEY><URL>whois.nic.st</URL></SERVER>
+		<SERVER><KEY>st</KEY><URL>whois.nic.st</URL></SERVER>
+		
 		<SERVER><KEY>ad</KEY><URL></URL></SERVER>
 		<SERVER><KEY>ae</KEY><URL>whois.nic.ae</URL></SERVER>
 		<SERVER><KEY>af</KEY><URL>whois.nic.af</URL></SERVER>
@@ -23,22 +51,18 @@
 		<SERVER><KEY>cy</KEY><URL></URL></SERVER>
 		<SERVER><KEY>es</KEY><URL>https://www.nic.es/esnic/esn/verValidacionWhoisAction?dominio={domain}</URL></SERVER>
 		<SERVER><KEY>fm</KEY><URL>http://www.dot.fm/query_whois.cfm?domain={domain}&amp;tld=fm</URL></SERVER>
-		<SERVER><KEY>jobs</KEY><URL>jobswhois.verisign-grs.com</URL></SERVER>
 		<SERVER><KEY>jp</KEY><URL>whois.jprs.jp?{domain}/e</URL></SERVER>
 		<SERVER><KEY>kr</KEY><URL>whois.krnic.net</URL></SERVER>
 		<SERVER><KEY>la</KEY><URL>whois.centralnic.net</URL></SERVER>
 		<SERVER><KEY>gr</KEY><URL></URL></SERVER>
 		<SERVER><KEY>gs</KEY><URL>http://www.adamsnames.tc/whois/?domain={domain}.gs</URL></SERVER>
-		<SERVER><KEY>mobi</KEY><URL>whois.dotmobiregistry.net</URL></SERVER>
 		<SERVER><KEY>ms</KEY><URL>whois.nic.ms</URL></SERVER>
 		<SERVER><KEY>mt</KEY><URL>http://www.um.edu.mt/cgi-bin/nic/whois?domain={domain}.mt</URL></SERVER>
 		<SERVER><KEY>pe</KEY><URL>http://nic.pe/detpublic.php?decid=B&amp;ndom={domain}.pe</URL></SERVER>
 		<SERVER><KEY>pr</KEY><URL>whois.uprr.pr</URL></SERVER>
-		<SERVER><KEY>pro</KEY><URL>whois.registry.pro</URL></SERVER>
 		<SERVER><KEY>sc</KEY><URL>whois2.afilias-grs.net</URL></SERVER>
 		<SERVER><KEY>tc</KEY><URL>http://www.adamsnames.tc/whois/?domain={domain}.tc</URL></SERVER>
 		<SERVER><KEY>tf</KEY><URL>http://www.adamsnames.tc/whois/?domain={domain}.tf</URL></SERVER>
-		<SERVER><KEY>travel</KEY><URL>http://www.whois.travel/whois.cgi?TLD=travel&amp;dn={domain}&amp;TYPE=DOMAIN</URL></SERVER>
 		<SERVER><KEY>ve</KEY><URL>whois.nic.ve</URL></SERVER>
 		<SERVER><KEY>vg</KEY><URL>http://www.adamsnames.tc/whois/?domain={domain}.vg</URL></SERVER>
 		<SERVER><KEY>net.au</KEY><URL>whois.aunic.net</URL></SERVER>
@@ -168,7 +192,7 @@
 	<RegistrarList>
 		<SERVER><KEY>MarkMonitor</KEY><URL>whois.markmonitor.com</URL></SERVER>
 		<SERVER><KEY>eMarkMonitor</KEY><URL>whois.markmonitor.com</URL></SERVER>
-		<SERVER><KEY>GoDaddy</KEY><URL>http://who.godaddy.com/whoisstd.aspx?Domain={domain}</URL></SERVER>
+		<SERVER><KEY>GoDaddy</KEY><URL>http://whois.to/{domain}</URL></SERVER>
 	</RegistrarList>
 	<RedirectList>
 		<SERVER><KEY>whois.wildwestdomains.com</KEY><URL>break</URL></SERVER>

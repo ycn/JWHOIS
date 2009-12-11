@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.net.HttpURLConnection;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.MalformedURLException;
@@ -19,8 +18,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
-
-import javax.net.ssl.HttpsURLConnection;
 
 public class WhoisClient {
 	private static final String	DEFAULT_HOST	= "whois.internic.net";
@@ -113,23 +110,21 @@ public class WhoisClient {
 	}
 
 	private void httpQuery(List<String> list) {
-		BufferedReader br = null;
 		URLConnection conn = null;
 		URL url = null;
 
 		try {
 			url = new URL( this.url );
 			conn = url.openConnection();
-			br = new BufferedReader( new InputStreamReader( conn.getInputStream(), "UTF-8" ) );
 
-			String line = null;
+			List<String> cleanList = Utility.cleanHtml( conn.getInputStream() );
+
 			boolean hasLineStart = (null == pnStart) ? false : true;
 			boolean hasLineEnd = (null == pnEnd) ? false : true;
 			boolean canRead = hasLineStart ? false : true;
 			boolean hasLineCatch = (null == pnCatch) ? false : true;
 			if (hasLineCatch) {
-				// Read to End
-				while ((line = br.readLine()) != null) {
+				for (String line : cleanList) {
 					// Matches
 					Matcher m = pnCatch.matcher( line );
 					if (m.find() && (m.groupCount() > 0)) {
@@ -149,7 +144,7 @@ public class WhoisClient {
 				}
 			}
 			else {
-				while ((line = br.readLine()) != null) {
+				for (String line : cleanList) {
 					if (skipLineHTML( line ))
 						continue;
 					if (!canRead && hasLineStart && pnStart.matcher( line ).find())
@@ -166,21 +161,6 @@ public class WhoisClient {
 		}
 		catch (IOException e) {
 			Utility.logWarn( "WhoisClient::httpQuery IOException: <url:" + this.url + ">", e );
-		}
-		finally {
-			try {
-				if (null != br)
-					br.close();
-				if (null != conn) {
-					if ("http".equals( ptlType ))
-						(( HttpURLConnection ) conn).disconnect();
-					else
-						(( HttpsURLConnection ) conn).disconnect();
-				}
-			}
-			catch (IOException e) {
-				// do nothing
-			}
 		}
 	}
 
@@ -276,7 +256,7 @@ public class WhoisClient {
 		int posSlash = addr.indexOf( '/' );
 		int posArgs = addr.indexOf( '?' );
 		int posAs = posSlash;
-		if (posSlash != -1 && posSlash < posArgs) {
+		if (posSlash != -1 && (posSlash < posArgs || posArgs == -1)) {
 			queryStr = addr.substring( posSlash );
 		}
 		else {

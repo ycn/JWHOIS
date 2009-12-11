@@ -81,8 +81,11 @@ public class WhoisEngine extends WhoisClient {
 		for (String t : tldtest) {
 			String s = XMLHelper.getSpecialServer( t, nonIcann );
 			if (!Utility.isEmpty( s )) {
+				if (s.equals( "break" ))
+					return whoisMap;
 				server = s;
 				tld = t;
+				this.deepWhois = false;
 				break;
 			}
 		}
