@@ -40,7 +40,7 @@ public class WhoisMap {
 	 *  
 	 *  - rawdata
 	 */
-	
+
 	// line type B : key = group(1); value = group(3)
 	private final static String	REGEX_LINEB	= "^\\s*([\u0000-\u0039\u003B-\u007E]+)\\s*(:|[\\.]{3,}|\\s{5,})\\s*([^\\/][^\\/].+)\\s*$";
 
@@ -146,8 +146,15 @@ public class WhoisMap {
 		if (Utility.isEmpty( deepSvr )) {
 			String tmp = getString( get( "regyinfo.registrar" ) );
 			tmp = XMLHelper.getRegistrarServer( tmp );
-			if (!Utility.isEmpty( tmp ))
-				deepSvr = tmp.toLowerCase();
+			if (!Utility.isEmpty( tmp )) {
+				tmp = tmp.toLowerCase();
+				if ("common".equals( tmp ))
+					deepSvr = XMLHelper.getCommonServer();
+				else if ("break".equals( tmp ))
+					deepSvr = "";
+				else
+					deepSvr = tmp;
+			}
 		}
 
 		if (Utility.isEmpty( deepSvr )) {
@@ -157,7 +164,12 @@ public class WhoisMap {
 		if (!Utility.isEmpty( deepSvr )) {
 			String redirec = XMLHelper.getRedirectServer( Utility.getHostName( deepSvr ) );
 			if (!Utility.isEmpty( redirec )) {
-				deepSvr = redirec.equals( "break" ) ? "" : redirec;
+				if ("common".equals( redirec ))
+					deepSvr = XMLHelper.getCommonServer();
+				else if ("break".equals( redirec ))
+					deepSvr = "";
+				else
+					deepSvr = redirec;
 			}
 		}
 	}
@@ -587,10 +599,6 @@ public class WhoisMap {
 	@SuppressWarnings("unchecked")
 	public boolean isEmpty() {
 		if (whoisMap.isEmpty())
-			return true;
-
-		Object o = get( "regyinfo.hasrecord" );
-		if (o == null || !o.toString().equals( "true" ))
 			return true;
 
 		if (Utility.isEmpty( ( List<String> ) get( "rawdata" ) ))

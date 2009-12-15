@@ -2682,6 +2682,7 @@
 			<Item><Key>Registrant:</Key><Translate>regrinfo.owner</Translate></Item>
 			<Item><Key>Administrative Contact:</Key><Translate>regrinfo.admin</Translate></Item>
 			<Item><Key>Technical Contact:</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Billing Contact:</Key><Translate>regrinfo.bill</Translate></Item>
 			<Item><Key>Original Creation Date:</Key><Translate>break</Translate></Item>
 			<Item><Key>Nameserver Information:</Key><Translate>break</Translate></Item>
 		</Contacts>
@@ -3381,6 +3382,531 @@
 		</List>
 	</Translates>
 	<Translates id="www.whois.travel" parser="A" linestart="^\s*Domain\sName" lineend="Whois\sdatabase\swas">
+		<List>
+			<Item><Key>Domain ID</Key><Translate>regrinfo.domain.id</Translate></Item>
+			<Item><Key>Domain Name</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Created by Registrar</Key><Translate>regyinfo.registrar</Translate></Item>
+			<Item><Key>Maintainer</Key><Translate>regyinfo.referrer</Translate></Item>
+			<Item><Key>Sponsoring Registrar</Key><Translate>regrinfo.domain.sponsor</Translate></Item>
+			<Item><Key>Domain Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Domain Registration Date</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Domain Last Updated Date</Key><Translate>regrinfo.domain.updated</Translate></Item>
+			<Item><Key>Domain Expiration Date</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>Name Server</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+			<Item><Key>Registrant ID</Key><Translate>regrinfo.owner.id</Translate></Item>
+			<Item><Key>Registrant Name</Key><Translate>regrinfo.owner.name</Translate></Item>
+			<Item><Key>Registrant Organization</Key><Translate>regrinfo.owner.organization</Translate></Item>
+			<Item><Key>Registrant Address1</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Address2</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Address3</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant City</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant State/Province</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Postal Code</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Country</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Country Code</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Phone Number</Key><Translate>regrinfo.owner.phone</Translate></Item>
+			<Item><Key>Registrant Facsimile Number</Key><Translate>regrinfo.owner.fax</Translate></Item>
+			<Item><Key>Registrant Email</Key><Translate>regrinfo.owner.email</Translate></Item>
+			<Item><Key>Administrative Contact ID</Key><Translate>regrinfo.admin.id</Translate></Item>
+			<Item><Key>Administrative Contact Name</Key><Translate>regrinfo.admin.name</Translate></Item>
+			<Item><Key>Administrative Contact Organization</Key><Translate>regrinfo.admin.organization</Translate></Item>
+			<Item><Key>Administrative Contact Address1</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact Address2</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact Address3</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact City</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact State/Province</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact Postal Code</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact Country</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact Country Code</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact Phone Number</Key><Translate>regrinfo.admin.phone</Translate></Item>
+			<Item><Key>Administrative Contact Facsimile Number</Key><Translate>regrinfo.admin.fax</Translate></Item>
+			<Item><Key>Administrative Contact Email</Key><Translate>regrinfo.admin.email</Translate></Item>
+			<Item><Key>Billing Contact ID</Key><Translate>regrinfo.bill.id</Translate></Item>
+			<Item><Key>Billing Contact Name</Key><Translate>regrinfo.bill.name</Translate></Item>
+			<Item><Key>Billing Contact Organization</Key><Translate>regrinfo.bill.organization</Translate></Item>
+			<Item><Key>Billing Contact Address1</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact Address2</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact Address3</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact City</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact State/Province</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact Postal Code</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact Country</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact Country Code</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact Phone Number</Key><Translate>regrinfo.bill.phone</Translate></Item>
+			<Item><Key>Billing Contact Facsimile Number</Key><Translate>regrinfo.bill.fax</Translate></Item>
+			<Item><Key>Billing Contact Email</Key><Translate>regrinfo.bill.email</Translate></Item>
+			<Item><Key>Technical Contact ID</Key><Translate>regrinfo.tech.id</Translate></Item>
+			<Item><Key>Technical Contact Name</Key><Translate>regrinfo.tech.name</Translate></Item>
+			<Item><Key>Technical Contact Organization</Key><Translate>regrinfo.tech.organization</Translate></Item>
+			<Item><Key>Technical Contact Address1</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact Address2</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact Address3</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact City</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact State/Province</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact Postal Code</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact Country</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact Country Code</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact Phone Number</Key><Translate>regrinfo.tech.phone</Translate></Item>
+			<Item><Key>Technical Contact Facsimile Number</Key><Translate>regrinfo.tech.fax</Translate></Item>
+			<Item><Key>Technical Contact Email</Key><Translate>regrinfo.tech.email</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.PublicDomainRegistry.com" parser="A" linestart="^\s*Domain\sName:" lineend="^\s*PRIVACYPROTECT\.ORG\sis\s">
+		<Contacts>
+			<Item><Key>Registrant:</Key><Translate>regrinfo.owner</Translate></Item>
+			<Item><Key>Administrative Contact:</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical Contact:</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Billing Contact:</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>Creation Date:</Key><Translate>break</Translate></Item>
+			<Item><Key>Domain servers in listed order:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</Contacts>
+		<List>
+			<Item><Key>Domain Name</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Creation Date</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Expiration Date</Key><Translate>regrinfo.domain.expires</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="tel.whois-servers.net" parser="A" linestart="^\s*Domain\sName" lineend="^\s*>>>>">
+		<List>
+			<Item><Key>Domain ID</Key><Translate>regrinfo.domain.id</Translate></Item>
+			<Item><Key>Domain Name</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Created by Registrar</Key><Translate>regyinfo.registrar</Translate></Item>
+			<Item><Key>Maintainer</Key><Translate>regyinfo.referrer</Translate></Item>
+			<Item><Key>Sponsoring Registrar</Key><Translate>regrinfo.domain.sponsor</Translate></Item>
+			<Item><Key>Domain Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Domain Registration Date</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Domain Last Updated Date</Key><Translate>regrinfo.domain.updated</Translate></Item>
+			<Item><Key>Domain Expiration Date</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>Name Server</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+			<Item><Key>Registrant ID</Key><Translate>regrinfo.owner.id</Translate></Item>
+			<Item><Key>Registrant Name</Key><Translate>regrinfo.owner.name</Translate></Item>
+			<Item><Key>Registrant Organization</Key><Translate>regrinfo.owner.organization</Translate></Item>
+			<Item><Key>Registrant Address1</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Address2</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Address3</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant City</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant State/Province</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Postal Code</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Country</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Country Code</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Phone Number</Key><Translate>regrinfo.owner.phone</Translate></Item>
+			<Item><Key>Registrant Facsimile Number</Key><Translate>regrinfo.owner.fax</Translate></Item>
+			<Item><Key>Registrant Email</Key><Translate>regrinfo.owner.email</Translate></Item>
+			<Item><Key>Administrative Contact ID</Key><Translate>regrinfo.admin.id</Translate></Item>
+			<Item><Key>Administrative Contact Name</Key><Translate>regrinfo.admin.name</Translate></Item>
+			<Item><Key>Administrative Contact Organization</Key><Translate>regrinfo.admin.organization</Translate></Item>
+			<Item><Key>Administrative Contact Address1</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact Address2</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact Address3</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact City</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact State/Province</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact Postal Code</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact Country</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact Country Code</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Administrative Contact Phone Number</Key><Translate>regrinfo.admin.phone</Translate></Item>
+			<Item><Key>Administrative Contact Facsimile Number</Key><Translate>regrinfo.admin.fax</Translate></Item>
+			<Item><Key>Administrative Contact Email</Key><Translate>regrinfo.admin.email</Translate></Item>
+			<Item><Key>Billing Contact ID</Key><Translate>regrinfo.bill.id</Translate></Item>
+			<Item><Key>Billing Contact Name</Key><Translate>regrinfo.bill.name</Translate></Item>
+			<Item><Key>Billing Contact Organization</Key><Translate>regrinfo.bill.organization</Translate></Item>
+			<Item><Key>Billing Contact Address1</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact Address2</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact Address3</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact City</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact State/Province</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact Postal Code</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact Country</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact Country Code</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Contact Phone Number</Key><Translate>regrinfo.bill.phone</Translate></Item>
+			<Item><Key>Billing Contact Facsimile Number</Key><Translate>regrinfo.bill.fax</Translate></Item>
+			<Item><Key>Billing Contact Email</Key><Translate>regrinfo.bill.email</Translate></Item>
+			<Item><Key>Technical Contact ID</Key><Translate>regrinfo.tech.id</Translate></Item>
+			<Item><Key>Technical Contact Name</Key><Translate>regrinfo.tech.name</Translate></Item>
+			<Item><Key>Technical Contact Organization</Key><Translate>regrinfo.tech.organization</Translate></Item>
+			<Item><Key>Technical Contact Address1</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact Address2</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact Address3</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact City</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact State/Province</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact Postal Code</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact Country</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact Country Code</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Technical Contact Phone Number</Key><Translate>regrinfo.tech.phone</Translate></Item>
+			<Item><Key>Technical Contact Facsimile Number</Key><Translate>regrinfo.tech.fax</Translate></Item>
+			<Item><Key>Technical Contact Email</Key><Translate>regrinfo.tech.email</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="www.nic.ac" parser="A" linestart="^\s*Domain\sHandle" lineend="^\s*Copyright 2008 c NIC\.AC\.">
+		<Contacts>
+			<Item><Key>Domain Handle :</Key><Translate>regrinfo.domain.id</Translate></Item>
+			<Item><Key>Domain Name :</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Organization Name :</Key><Translate>regrinfo.owner.name</Translate></Item>
+			<Item><Key>Street :</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Created :</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Expires :</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>Last Updated :</Key><Translate>regrinfo.domain.updated</Translate></Item>
+			<Item><Key>Admin Contact</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical Contact</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Billing Contact</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>Primary Nameserver</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</Contacts>
+	</Translates>
+	<Translates id="whois.nic.cd" parser="A" linestart="^\s*Domain Name:">
+		<Contacts>
+			<Item><Key>Owner/Main Contact:</Key><Translate>regrinfo.owner</Translate></Item>
+			<Item><Key>Administrative Contact:</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical Contact:</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Billing Contact:</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>Name Servers:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</Contacts>
+		<ContactInfo>
+			<Item><Key>Name</Key><Translate>name</Translate></Item>
+			<Item><Key>Organization</Key><Translate>organization</Translate></Item>
+			<Item><Key>Registered Address(line1)</Key><Translate>address</Translate></Item>
+			<Item><Key>Registered Address(line2)</Key><Translate>address</Translate></Item>
+			<Item><Key>Registered Address(line3)</Key><Translate>address</Translate></Item>
+			<Item><Key>Registered City</Key><Translate>address</Translate></Item>
+			<Item><Key>Registered State</Key><Translate>address</Translate></Item>
+			<Item><Key>Registered Country</Key><Translate>address</Translate></Item>
+			<Item><Key>Registered Postalcode</Key><Translate>address</Translate></Item>
+			<Item><Key>Telephone</Key><Translate>phone</Translate></Item>
+			<Item><Key>Facsimile</Key><Translate>fax</Translate></Item>
+			<Item><Key>EMAIL</Key><Translate>email</Translate></Item>
+			<Item><Key>Creation Date</Key><Translate>created</Translate></Item>
+			<Item><Key>Last Updated Date</Key><Translate>updated</Translate></Item>
+		</ContactInfo>
+		<List>
+			<Item><Key>Domain Name</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Domain Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Creation Date</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Expiration Date</Key><Translate>regrinfo.domain.expires</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.nic.ly" parser="A" linestart="^\s*Registrant:" lineend="\s*--">
+		<Contacts>
+			<Item><Key>Registrant:</Key><Translate>regrinfo.owner</Translate></Item>
+			<Item><Key>Administrative Contact:</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical Contact:</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Billing Contact:</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>Domain servers in listed order:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+			<Item><Key>Domain Status:</Key><Translate>break</Translate></Item>
+		</Contacts>
+		<List>
+			<Item><Key>Domain Name</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Domain Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Created</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Updated</Key><Translate>regrinfo.domain.updated</Translate></Item>
+			<Item><Key>Expired</Key><Translate>regrinfo.domain.expires</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.nic.mu" parser="A" linestart="^\s*Query:">
+		<Contacts>
+			<Item><Key>Registrant:</Key><Translate>regrinfo.owner</Translate></Item>
+			<Item><Key>Administrative Contact:</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical Contact:</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Billing Contact:</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>Name Servers:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</Contacts>
+		<List>
+			<Item><Key>Registrar</Key><Translate>regrinfo.domain.registrar,regrinfo.domain.sponsor</Translate></Item>
+			<Item><Key>Query</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Created</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Modified</Key><Translate>regrinfo.domain.updated</Translate></Item>
+			<Item><Key>Expired</Key><Translate>regrinfo.domain.expires</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.na-nic.com.na" parser="A" linestart="^\s*Query:">
+		<Contacts>
+			<Item><Key>Registrant:</Key><Translate>regrinfo.owner</Translate></Item>
+			<Item><Key>Administrative Contact:</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical Contact:</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Billing Contact:</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>Name Servers:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</Contacts>
+		<List>
+			<Item><Key>Registrar</Key><Translate>regrinfo.domain.registrar,regrinfo.domain.sponsor</Translate></Item>
+			<Item><Key>Query</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Created</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Modified</Key><Translate>regrinfo.domain.updated</Translate></Item>
+			<Item><Key>Expired</Key><Translate>regrinfo.domain.expires</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.nic.fr" parser="B" linestart="^\s*domain:" blockhead="nic-hdl" contacthandle="nic-hdl">
+		<Contacts>
+			<Item><Key>holder-c</Key><Translate>regrinfo.owner</Translate></Item>
+			<Item><Key>admin-c</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>tech-c</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>billing-c</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>zone-c</Key><Translate>regrinfo.zone</Translate></Item>
+		</Contacts>
+		<ContactInfo>
+			<Item><Key>type</Key><Translate>type</Translate></Item>
+			<Item><Key>contact</Key><Translate>name</Translate></Item>
+			<Item><Key>organization</Key><Translate>organization</Translate></Item>
+			<Item><Key>organisation</Key><Translate>organization</Translate></Item>
+			<Item><Key>address</Key><Translate>address</Translate></Item>
+			<Item><Key>pcode</Key><Translate>address</Translate></Item>
+			<Item><Key>city</Key><Translate>address</Translate></Item>
+			<Item><Key>country</Key><Translate>address</Translate></Item>
+			<Item><Key>phone</Key><Translate>phone</Translate></Item>
+			<Item><Key>fax-no</Key><Translate>fax</Translate></Item>
+			<Item><Key>e-mail</Key><Translate>email</Translate></Item>
+			<Item><Key>changed</Key><Translate>changed</Translate></Item>
+			<Item><Key>created</Key><Translate>created</Translate></Item>
+		</ContactInfo>
+		<List>
+			<Item><Key>registrar</Key><Translate>regyinfo.registrar,regrinfo.domain.sponsor</Translate></Item>
+			<Item><Key>domain</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>created</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>last-update</Key><Translate>regrinfo.domain.changed</Translate></Item>
+			<Item><Key>expires</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>nserver</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois2.afilias-grs.net" parser="A" linestart="^\s*Domain\sID:">
+		<List>
+			<Item><Key>Sponsoring Registrar</Key><Translate>regyinfo.registrar,regrinfo.domain.sponsor</Translate></Item>
+			<Item><Key>Domain ID</Key><Translate>regrinfo.domain.id</Translate></Item>
+			<Item><Key>Domain Name</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Registration Type</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Created On</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Last Updated On</Key><Translate>regrinfo.domain.changed</Translate></Item>
+			<Item><Key>Expiration Date</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>Name Server</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+			<Item><Key>Registrant ID</Key><Translate>regrinfo.owner.id</Translate></Item>
+			<Item><Key>Registrant Name</Key><Translate>regrinfo.owner.name</Translate></Item>
+			<Item><Key>Registrant Organization</Key><Translate>regrinfo.owner.organization</Translate></Item>
+			<Item><Key>Registrant Street1</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Street2</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Street3</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant City</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant State/Province</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Postal Code</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Country</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Phone</Key><Translate>regrinfo.owner.phone</Translate></Item>
+			<Item><Key>Registrant FAX</Key><Translate>regrinfo.owner.fax</Translate></Item>
+			<Item><Key>Registrant Email</Key><Translate>regrinfo.owner.email</Translate></Item>
+			<Item><Key>Admin ID</Key><Translate>regrinfo.admin.id</Translate></Item>
+			<Item><Key>Admin Name</Key><Translate>regrinfo.admin.name</Translate></Item>
+			<Item><Key>Admin Organization</Key><Translate>regrinfo.admin.organization</Translate></Item>
+			<Item><Key>Admin Street1</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin Street2</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin Street3</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin City</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin State/Province</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin Postal Code</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin Country</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin Phone</Key><Translate>regrinfo.admin.phone</Translate></Item>
+			<Item><Key>Admin FAX</Key><Translate>regrinfo.admin.fax</Translate></Item>
+			<Item><Key>Admin Email</Key><Translate>regrinfo.admin.email</Translate></Item>
+			<Item><Key>Billing ID</Key><Translate>regrinfo.bill.id</Translate></Item>
+			<Item><Key>Billing Name</Key><Translate>regrinfo.bill.name</Translate></Item>
+			<Item><Key>Billing Organization</Key><Translate>regrinfo.bill.organization</Translate></Item>
+			<Item><Key>Billing Street1</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Street2</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Street3</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing City</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing State/Province</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Postal Code</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Country</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Phone</Key><Translate>regrinfo.bill.phone</Translate></Item>
+			<Item><Key>Billing FAX</Key><Translate>regrinfo.bill.fax</Translate></Item>
+			<Item><Key>Billing Email</Key><Translate>regrinfo.bill.email</Translate></Item>
+			<Item><Key>Tech ID</Key><Translate>regrinfo.tech.id</Translate></Item>
+			<Item><Key>Tech Name</Key><Translate>regrinfo.tech.name</Translate></Item>
+			<Item><Key>Tech Organization</Key><Translate>regrinfo.tech.organization</Translate></Item>
+			<Item><Key>Tech Street1</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech Street2</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech Street3</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech City</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech State/Province</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech Postal Code</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech Country</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech Phone</Key><Translate>regrinfo.tech.phone</Translate></Item>
+			<Item><Key>Tech FAX</Key><Translate>regrinfo.tech.fax</Translate></Item>
+			<Item><Key>Tech Email</Key><Translate>regrinfo.tech.email</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="www.nic.sh" parser="A" linestart="^\s*Domain\sHandle" lineend="^\s*Copyright ">
+		<Contacts>
+			<Item><Key>Domain Handle :</Key><Translate>regrinfo.domain.id</Translate></Item>
+			<Item><Key>Domain Name :</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Organization Name :</Key><Translate>regrinfo.owner.name</Translate></Item>
+			<Item><Key>Street :</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Created :</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Expires :</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>Last Updated :</Key><Translate>regrinfo.domain.updated</Translate></Item>
+			<Item><Key>Admin Contact</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical Contact</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Billing Contact</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>Primary Nameserver</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</Contacts>
+	</Translates>
+	<Translates id="whois.nic.st" parser="A" linestart="^\s*Domain Name:">
+		<Contacts>
+			<Item><Key>Registrant:</Key><Translate>regrinfo.owner</Translate></Item>
+			<Item><Key>Administrative Contact:</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical Contact:</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Billing Contact:</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>Status</Key><Translate>break</Translate></Item>
+		</Contacts>
+		<ContactInfo>
+			<Item><Key>type</Key><Translate>type</Translate></Item>
+			<Item><Key>contact</Key><Translate>name</Translate></Item>
+			<Item><Key>organization</Key><Translate>organization</Translate></Item>
+			<Item><Key>organisation</Key><Translate>organization</Translate></Item>
+			<Item><Key>address</Key><Translate>address</Translate></Item>
+			<Item><Key>pcode</Key><Translate>address</Translate></Item>
+			<Item><Key>city</Key><Translate>address</Translate></Item>
+			<Item><Key>country</Key><Translate>address</Translate></Item>
+			<Item><Key>phone</Key><Translate>phone</Translate></Item>
+			<Item><Key>fax-no</Key><Translate>fax</Translate></Item>
+			<Item><Key>e-mail</Key><Translate>email</Translate></Item>
+			<Item><Key>changed</Key><Translate>changed</Translate></Item>
+			<Item><Key>created</Key><Translate>created</Translate></Item>
+		</ContactInfo>
+		<List>
+			<Item><Key>Registrar</Key><Translate>regrinfo.domain.registrar,regrinfo.domain.sponsor</Translate></Item>
+			<Item><Key>Domain Name</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Creation Date</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Updated Date</Key><Translate>regrinfo.domain.updated</Translate></Item>
+			<Item><Key>Expiration Date</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>Name Server</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="co.za" parser="A" linestart="^\s*1a. domain ">
+		<List>
+			<Item><Key>1a. domain</Key><Translate>regrinfo.domain.name</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="www.org.za" parser="A" linestart="^\s*rwhois search on" lineend="\s*Search Again">
+		<Contacts>
+			<Item><Key>rwhois search on</Key><Translate>regrinfo.owner</Translate></Item>
+			<Item><Key>Administrative Contact:</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical Contact:</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Billing Contact:</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>Record last updated on</Key><Translate>break</Translate></Item>
+			<Item><Key>Domain name servers in listed order:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+			<Item><Key>Status</Key><Translate>break</Translate></Item>
+		</Contacts>
+		<List>
+			<Item><Key>Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.nic.ag" parser="A" linestart="^\s*Domain\sID:">
+		<List>
+			<Item><Key>Sponsoring Registrar</Key><Translate>regyinfo.registrar,regrinfo.domain.sponsor</Translate></Item>
+			<Item><Key>Domain ID</Key><Translate>regrinfo.domain.id</Translate></Item>
+			<Item><Key>Domain Name</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Registration Type</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Created On</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Last Updated On</Key><Translate>regrinfo.domain.changed</Translate></Item>
+			<Item><Key>Expiration Date</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>Name Server</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+			<Item><Key>Registrant ID</Key><Translate>regrinfo.owner.id</Translate></Item>
+			<Item><Key>Registrant Name</Key><Translate>regrinfo.owner.name</Translate></Item>
+			<Item><Key>Registrant Organization</Key><Translate>regrinfo.owner.organization</Translate></Item>
+			<Item><Key>Registrant Street1</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Street2</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Street3</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant City</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant State/Province</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Postal Code</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Country</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>Registrant Phone</Key><Translate>regrinfo.owner.phone</Translate></Item>
+			<Item><Key>Registrant FAX</Key><Translate>regrinfo.owner.fax</Translate></Item>
+			<Item><Key>Registrant Email</Key><Translate>regrinfo.owner.email</Translate></Item>
+			<Item><Key>Admin ID</Key><Translate>regrinfo.admin.id</Translate></Item>
+			<Item><Key>Admin Name</Key><Translate>regrinfo.admin.name</Translate></Item>
+			<Item><Key>Admin Organization</Key><Translate>regrinfo.admin.organization</Translate></Item>
+			<Item><Key>Admin Street1</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin Street2</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin Street3</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin City</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin State/Province</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin Postal Code</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin Country</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>Admin Phone</Key><Translate>regrinfo.admin.phone</Translate></Item>
+			<Item><Key>Admin FAX</Key><Translate>regrinfo.admin.fax</Translate></Item>
+			<Item><Key>Admin Email</Key><Translate>regrinfo.admin.email</Translate></Item>
+			<Item><Key>Billing ID</Key><Translate>regrinfo.bill.id</Translate></Item>
+			<Item><Key>Billing Name</Key><Translate>regrinfo.bill.name</Translate></Item>
+			<Item><Key>Billing Organization</Key><Translate>regrinfo.bill.organization</Translate></Item>
+			<Item><Key>Billing Street1</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Street2</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Street3</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing City</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing State/Province</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Postal Code</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Country</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>Billing Phone</Key><Translate>regrinfo.bill.phone</Translate></Item>
+			<Item><Key>Billing FAX</Key><Translate>regrinfo.bill.fax</Translate></Item>
+			<Item><Key>Billing Email</Key><Translate>regrinfo.bill.email</Translate></Item>
+			<Item><Key>Tech ID</Key><Translate>regrinfo.tech.id</Translate></Item>
+			<Item><Key>Tech Name</Key><Translate>regrinfo.tech.name</Translate></Item>
+			<Item><Key>Tech Organization</Key><Translate>regrinfo.tech.organization</Translate></Item>
+			<Item><Key>Tech Street1</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech Street2</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech Street3</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech City</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech State/Province</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech Postal Code</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech Country</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>Tech Phone</Key><Translate>regrinfo.tech.phone</Translate></Item>
+			<Item><Key>Tech FAX</Key><Translate>regrinfo.tech.fax</Translate></Item>
+			<Item><Key>Tech Email</Key><Translate>regrinfo.tech.email</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.offshore.ai" parser="A">
+		<List>
+			<Item><Key>Administrative Contact</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical  Contact</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Billing Contact</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>Primary Nameserver</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+			<Item><Key>Secondary Nameserver</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.nic.af" parser="A" linestart="^\s*Query:">
+		<Contacts>
+			<Item><Key>Registrant:</Key><Translate>regrinfo.owner</Translate></Item>
+			<Item><Key>Administrative Contact:</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical Contacts:</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Name Servers:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</Contacts>
+		<List>
+			<Item><Key>Registrar</Key><Translate>regyinfo.registrar,regrinfo.domain.sponsor</Translate></Item>
+			<Item><Key>Query</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Created</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Expires</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>Modified</Key><Translate>regrinfo.domain.changed</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.adamsnames.tc" parser="A">
+		<Contacts>
+			<Item><Key>Registrant</Key><Translate>regrinfo.owner</Translate></Item>
+			<Item><Key>Admin Contact</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical Contact</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Billing Contact</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>Registrant, Technical Contact, Admin. Contact</Key><Translate>regrinfo.owner,regrinfo.admin,regrinfo.tech</Translate></Item>
+			<Item><Key>Resource Records</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</Contacts>
+		<List>
+			<Item><Key>Domain Name</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Created</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Expires</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>Modified</Key><Translate>regrinfo.domain.changed</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.nic.us" parser="A" lineend="^\s*>>>>">
 		<List>
 			<Item><Key>Domain ID</Key><Translate>regrinfo.domain.id</Translate></Item>
 			<Item><Key>Domain Name</Key><Translate>regrinfo.domain.name</Translate></Item>

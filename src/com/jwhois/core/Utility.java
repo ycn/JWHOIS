@@ -227,6 +227,10 @@ public class Utility {
 			return l;
 		if (line.indexOf( ">" ) >= 0 && line.indexOf( "<" ) == -1)
 			return l;
+		line = line.replaceAll( "&lt;", "<" );
+		line = line.replaceAll( "&gt;", ">" );
+		line = line.replaceAll( "&nbsp;", " " );
+		line = line.replaceAll( "&amp;", "&" );
 		return line;
 	}
 

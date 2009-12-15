@@ -138,8 +138,9 @@ public final class XMLHelper {
 						Element elm = ( Element ) list.item( i );
 						String key = elm.getAttribute( "id" );
 						if (!Utility.isEmpty( key )) {
+							key = key.toLowerCase();
 							Map<String, Object> map = new HashMap<String, Object>();
-							translates.put( key.toLowerCase(), map );
+							translates.put( key, map );
 							buildTranslateMap( elm, map );
 						}
 					}
@@ -200,7 +201,25 @@ public final class XMLHelper {
 		return getServerValue( "RedirectList", name );
 	}
 
+	static String getCommonServer() {
+		return pickUpSingleServer( "CommonServer" );
+	}
+
 	// -- getter utils
+	static String pickUpSingleServer(String listname) {
+		String ret = "";
+		if (null != servers) {
+			Map<String, String> map = servers.get( listname.toLowerCase() );
+			if (!Utility.isEmpty( map ) && !map.isEmpty()) {
+				for (String key : map.keySet()) {
+					ret = map.get( key );
+					break;
+				}
+			}
+		}
+		return ret;
+	}
+
 	static String getServerValue(String listname, String key) {
 		String ret = "";
 		if (null != servers) {

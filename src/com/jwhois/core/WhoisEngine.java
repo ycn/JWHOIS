@@ -66,7 +66,7 @@ public class WhoisEngine extends WhoisClient {
 	public WhoisMap build() {
 		if (!isVaildDom)
 			return null;
-		
+
 		if (null != whoisMap)
 			return whoisMap;
 
@@ -131,7 +131,15 @@ public class WhoisEngine extends WhoisClient {
 		// Get the raw data
 		List<String> rawdata = domLookup( domain, tld );
 		if (Utility.isEmpty( rawdata )) {
-			return whoisMap;
+			setServer( XMLHelper.getCommonServer() );
+			servername = hostname;
+			setLineStartFilter( XMLHelper.getTranslateAttr( "LineStart", servername ) );
+			setLineEndFilter( XMLHelper.getTranslateAttr( "LineEnd", servername ) );
+			setLineCatchFilter( XMLHelper.getTranslateAttr( "LineCatch", servername ) );
+			rawdata = domLookup( domain, tld );
+			if (Utility.isEmpty( rawdata )) {
+				return whoisMap;
+			}
 		}
 
 		whoisMap.set( "rawdata", rawdata );
@@ -139,6 +147,7 @@ public class WhoisEngine extends WhoisClient {
 		// Set the necessary fields
 		whoisMap.set( "regyinfo.type", "domain" );
 		whoisMap.set( "regyinfo.domain", domain );
+		whoisMap.set( "regrinfo.domain.name", domain );
 
 		List<String> serverList = new ArrayList<String>();
 		whoisMap.set( "regyinfo.servers", serverList );
@@ -188,9 +197,7 @@ public class WhoisEngine extends WhoisClient {
 		}
 
 		// Fixed
-		if (hasWhoisRecord) {
-			whoisMap.set( "regyinfo.hasrecord", true );
-		}
+		whoisMap.set( "regyinfo.hasrecord", hasWhoisRecord ? true : false );
 
 		return whoisMap;
 	}
