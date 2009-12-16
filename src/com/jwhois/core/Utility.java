@@ -193,7 +193,7 @@ public class Utility {
 
 	public static void logErr(String title, Exception e) {
 		if (null != logger)
-			logger.doLog( LEVEL.ERROR, title, e );
+			logger.doLog( LEVEL.ERROR, title + " | ", e );
 		else
 			System.out.println( "[ERROR] - jWhois - " + title + e.getMessage() );
 	}
