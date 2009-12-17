@@ -92,7 +92,9 @@ public class WhoisMap {
 		else if ("b".equals( parser )) {
 			String blockHead = XMLHelper.getTranslateAttr( "BlockHead", server );
 			String contactHandle = XMLHelper.getTranslateAttr( "ContactHandle", server );
-			rdMap = parseB( rawdata, contacts, blockHead, contactHandle );
+			String[] blockHeads = Utility.isEmpty( blockHead ) ? null : blockHead.split( "," );
+			String[] contactHandles = Utility.isEmpty( contactHandle ) ? null : contactHandle.split( "," );
+			rdMap = parseB( rawdata, contacts, blockHeads, contactHandles );
 		}
 		else if ("c".equals( parser )) {
 			rdMap = parseC( rawdata );
@@ -210,11 +212,19 @@ public class WhoisMap {
 					String key = m.group( 1 ).trim().toLowerCase();
 					if (contactInfo.containsKey( key )) {
 						cache = contactInfo.get( key );
-						if (cache.startsWith( "k|" )) {
-							map.set( cache.substring( 2 ), key + ": " + m.group( 3 ).trim(), true );
-						}
-						else {
-							map.set( cache, m.group( 3 ).trim(), true );
+						String[] caches = cache.split( "," );
+						for (String s : caches) {
+							String mk = s, mv = m.group( 3 ).trim();
+							if (s.startsWith( "k|" )) {
+								mk = s.substring( 2 );
+								mv = key + ": " + mv;
+							}
+							if (mk.indexOf( '.' ) >= 1) {
+								set( mk, mv, true );
+							}
+							else {
+								map.set( mk, mv, true );
+							}
 						}
 						continue;
 					}
@@ -296,6 +306,17 @@ public class WhoisMap {
 		return rdMap.getMap();
 	}
 
+	private boolean inArray(Object o, Object[] arr) {
+		if (o == null || arr == null || arr.length == 0)
+			return false;
+		for (Object a : arr) {
+			if (o.equals( a )) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	/*
 	 *  == WHOIS RAWDATA TYPE B ==
 	 *  
@@ -313,8 +334,8 @@ public class WhoisMap {
 	 *  k:v
 	 *  ...
 	 */
-	private Map<String, Object> parseB(List<String> rawdata, Map<String, String> contacts, String blockHead,
-			String contactHandle) {
+	private Map<String, Object> parseB(List<String> rawdata, Map<String, String> contacts, String[] blockHeads,
+			String[] contactHandles) {
 		WhoisMap rdMap = new WhoisMap();
 
 		Map<String, String> cMap = new HashMap<String, String>();
@@ -325,27 +346,32 @@ public class WhoisMap {
 		L1: for (String line : rawdata) {
 			Matcher m = pnLineB.matcher( line );
 			if (m.find()) {
-				String key = m.group( 1 ).trim();
+				String key = m.group( 1 ).trim().toLowerCase();
 				String val = m.group( 3 ).trim();
-				if (!Utility.isEmpty( blockHead ) && !Utility.isEmpty( contactHandle )
-						&& key.toLowerCase().equals( blockHead )) {
-					cList = new ArrayList<String>();
-					cRead = true;
+				if (!Utility.isEmpty( blockHeads ) && !Utility.isEmpty( contactHandles ) && inArray( key, blockHeads )) {
+					if ("break".equals( contacts.get( key ) )) {
+						cRead = false;
+						continue;
+					}
+					else {
+						cList = new ArrayList<String>();
+						cRead = true;
+					}
 				}
 				if (cRead && (null != cList)) {
 					cList.add( line );
-					if (key.toLowerCase().equals( contactHandle )) {
+					if (inArray( key, contactHandles )) {
 						hdlMap.put( val, cList );
 					}
 					continue;
 				}
 
 				// If we find a contact, save it for secondary finding.
-				if (!Utility.isEmpty( contacts ) && contacts.containsKey( key.toLowerCase() )) {
+				if (!Utility.isEmpty( contacts ) && contacts.containsKey( key )) {
 					cMap.put( contacts.get( key ), val );
 					continue L1;
 				}
-				rdMap.set( key.toLowerCase(), val, true );
+				rdMap.set( key, val, true );
 			}
 		}
 
@@ -376,9 +402,9 @@ public class WhoisMap {
 		for (String line : rawdata) {
 			Matcher m = pnLineB.matcher( line );
 			if (m.find()) {
-				String key = m.group( 1 ).trim();
+				String key = m.group( 1 ).trim().toLowerCase();
 				String val = m.group( 3 ).trim();
-				rdMap.set( key.toLowerCase(), val, true );
+				rdMap.set( key, val, true );
 			}
 		}
 		return rdMap.getMap();

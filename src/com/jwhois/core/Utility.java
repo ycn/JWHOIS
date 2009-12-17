@@ -54,6 +54,17 @@ public class Utility {
 	}
 
 	/**
+	 * check if a array is empty
+	 * 
+	 * @param str
+	 * @return [flag]
+	 */
+	public static boolean isEmpty(Object[] arr) {
+		return ((null == arr) || arr.length == 0);
+	}
+
+	
+	/**
 	 * check if a List<?> is empty
 	 * 
 	 * @param list

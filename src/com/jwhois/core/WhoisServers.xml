@@ -22,12 +22,21 @@
 		<SERVER><KEY>af</KEY><URL>whois.nic.af</URL></SERVER>
 		<SERVER><KEY>ag</KEY><URL>whois.nic.ag</URL></SERVER>
 		<SERVER><KEY>ai</KEY><URL>http://whois.offshore.ai/cgi-bin/whois.pl?domain-name={domain}</URL></SERVER>
+		<SERVER><KEY>am</KEY><URL>whois.nic.am</URL></SERVER>
+		<SERVER><KEY>at</KEY><URL>whois.nic.at</URL></SERVER>
 		<SERVER><KEY>bb</KEY><URL>http://domains.org.bb/regsearch/getdetails.cfm?DND={domain}</URL></SERVER>
+		<SERVER><KEY>be</KEY><URL>whois.dns.be</URL></SERVER>
+		<SERVER><KEY>bg</KEY><URL>whois.register.bg</URL></SERVER>
 		<SERVER><KEY>bz</KEY><URL>whois2.afilias-grs.net</URL></SERVER>
 		<SERVER><KEY>ca</KEY><URL>whois.cira.ca</URL></SERVER>
 		<SERVER><KEY>cd</KEY><URL>whois.nic.cd</URL></SERVER>
 		<SERVER><KEY>cm</KEY><URL>register.cm</URL></SERVER>
+		<SERVER><KEY>cz</KEY><URL>whois.nic.cz</URL></SERVER>
+		<SERVER><KEY>de</KEY><URL>whois.nic.de?-T dn,ace {domain}</URL></SERVER>
+		<SERVER><KEY>dk</KEY><URL>whois.dk-hostmaster.dk?--show-handles {domain}</URL></SERVER>
+		<SERVER><KEY>ee</KEY><URL>whois.eenet.ee</URL></SERVER>
 		<SERVER><KEY>gd</KEY><URL>whois.adamsnames.tc</URL></SERVER>
+		<SERVER><KEY>gl</KEY><URL>whois.nic.gl</URL></SERVER>
 		<SERVER><KEY>jp</KEY><URL>whois.jprs.jp?{domain}/e</URL></SERVER>
 		<SERVER><KEY>kr</KEY><URL>whois.krnic.net</URL></SERVER>
 		<SERVER><KEY>ly</KEY><URL>whois.nic.ly</URL></SERVER>
@@ -48,7 +57,6 @@
 		<SERVER><KEY>co.za</KEY><URL>http://co.za/cgi-bin/whois.sh?Domain={domain}</URL></SERVER>
 		<SERVER><KEY>org.za</KEY><URL>http://www.org.za/cgi-bin/rwhois?domain={domain}&amp;format=full</URL></SERVER>
 		
-		<SERVER><KEY>bg</KEY><URL>http://www.register.bg/bg-nic/displaydomain.pl?domain={domain}.bg&amp;search=exist</URL></SERVER>
 		<SERVER><KEY>bi</KEY><URL>whois.nic.bi</URL></SERVER>
 		<SERVER><KEY>bj</KEY><URL>whois.nic.bj</URL></SERVER>
 		<SERVER><KEY>es</KEY><URL>https://www.nic.es/esnic/esn/verValidacionWhoisAction?dominio={domain}</URL></SERVER>
