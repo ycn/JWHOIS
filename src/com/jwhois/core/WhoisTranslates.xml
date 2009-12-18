@@ -2337,32 +2337,6 @@
 			<Item><Key>zone-phone</Key><Translate>regrinfo.zone.phone</Translate></Item>
 			<Item><Key>zone-fax</Key><Translate>regrinfo.zone.fax</Translate></Item>
 			<Item><Key>zone-email</Key><Translate>regrinfo.zone.email</Translate></Item>
-			<Item><Key>abuse-title</Key><Translate>regrinfo.abuse.name</Translate></Item>
-			<Item><Key>abuse-fname</Key><Translate>regrinfo.abuse.name</Translate></Item>
-			<Item><Key>abuse-lname</Key><Translate>regrinfo.abuse.name</Translate></Item>
-			<Item><Key>abuse-organization</Key><Translate>regrinfo.abuse.organization</Translate></Item>
-			<Item><Key>abuse-address</Key><Translate>regrinfo.abuse.address</Translate></Item>
-			<Item><Key>abuse-street</Key><Translate>regrinfo.abuse.address</Translate></Item>
-			<Item><Key>abuse-city</Key><Translate>regrinfo.abuse.address</Translate></Item>
-			<Item><Key>abuse-zip</Key><Translate>regrinfo.abuse.address</Translate></Item>
-			<Item><Key>abuse-country</Key><Translate>regrinfo.abuse.address</Translate></Item>
-			<Item><Key>abuse-state</Key><Translate>regrinfo.abuse.address</Translate></Item>
-			<Item><Key>abuse-phone</Key><Translate>regrinfo.abuse.phone</Translate></Item>
-			<Item><Key>abuse-fax</Key><Translate>regrinfo.abuse.fax</Translate></Item>
-			<Item><Key>abuse-email</Key><Translate>regrinfo.abuse.email</Translate></Item>
-			<Item><Key>network-title</Key><Translate>regrinfo.network.name</Translate></Item>
-			<Item><Key>network-fname</Key><Translate>regrinfo.network.name</Translate></Item>
-			<Item><Key>network-lname</Key><Translate>regrinfo.network.name</Translate></Item>
-			<Item><Key>network-organization</Key><Translate>regrinfo.network.organization</Translate></Item>
-			<Item><Key>network-address</Key><Translate>regrinfo.network.address</Translate></Item>
-			<Item><Key>network-street</Key><Translate>regrinfo.network.address</Translate></Item>
-			<Item><Key>network-city</Key><Translate>regrinfo.network.address</Translate></Item>
-			<Item><Key>network-zip</Key><Translate>regrinfo.network.address</Translate></Item>
-			<Item><Key>network-country</Key><Translate>regrinfo.network.address</Translate></Item>
-			<Item><Key>network-state</Key><Translate>regrinfo.network.address</Translate></Item>
-			<Item><Key>network-phone</Key><Translate>regrinfo.network.phone</Translate></Item>
-			<Item><Key>network-fax</Key><Translate>regrinfo.network.fax</Translate></Item>
-			<Item><Key>network-email</Key><Translate>regrinfo.network.email</Translate></Item>
 		</List>
 	</Translates>
 	<Translates id="whois.tmagnic.net" parser="A" linestart="^\s*Owner\sContact">
@@ -2424,16 +2398,6 @@
 			<Item><Key>Zone Email</Key><Translate>regrinfo.zone.email</Translate></Item>
 			<Item><Key>Zone Phone</Key><Translate>regrinfo.zone.phone</Translate></Item>
 			<Item><Key>Zone Fax</Key><Translate>regrinfo.zone.fax</Translate></Item>
-			<Item><Key>Abuse Name</Key><Translate>regrinfo.abuse.name</Translate></Item>
-			<Item><Key>Abuse Address</Key><Translate>regrinfo.abuse.address</Translate></Item>
-			<Item><Key>Abuse Email</Key><Translate>regrinfo.abuse.email</Translate></Item>
-			<Item><Key>Abuse Phone</Key><Translate>regrinfo.abuse.phone</Translate></Item>
-			<Item><Key>Abuse Fax</Key><Translate>regrinfo.abuse.fax</Translate></Item>
-			<Item><Key>Network Name</Key><Translate>regrinfo.network.name</Translate></Item>
-			<Item><Key>Network Address</Key><Translate>regrinfo.network.address</Translate></Item>
-			<Item><Key>Network Email</Key><Translate>regrinfo.network.email</Translate></Item>
-			<Item><Key>Network Phone</Key><Translate>regrinfo.network.phone</Translate></Item>
-			<Item><Key>Network Fax</Key><Translate>regrinfo.network.fax</Translate></Item>
 		</List>
 	</Translates>
 	<Translates id="whois.name2host.com" parser="A" lineend="^\s*Name2Host">
@@ -2493,16 +2457,6 @@
 			<Item><Key>Zone Email</Key><Translate>regrinfo.zone.email</Translate></Item>
 			<Item><Key>Zone Phone</Key><Translate>regrinfo.zone.phone</Translate></Item>
 			<Item><Key>Zone Fax</Key><Translate>regrinfo.zone.fax</Translate></Item>
-			<Item><Key>Abuse Name</Key><Translate>regrinfo.abuse.name</Translate></Item>
-			<Item><Key>Abuse Address</Key><Translate>regrinfo.abuse.address</Translate></Item>
-			<Item><Key>Abuse Email</Key><Translate>regrinfo.abuse.email</Translate></Item>
-			<Item><Key>Abuse Phone</Key><Translate>regrinfo.abuse.phone</Translate></Item>
-			<Item><Key>Abuse Fax</Key><Translate>regrinfo.abuse.fax</Translate></Item>
-			<Item><Key>Network Name</Key><Translate>regrinfo.network.name</Translate></Item>
-			<Item><Key>Network Address</Key><Translate>regrinfo.network.address</Translate></Item>
-			<Item><Key>Network Email</Key><Translate>regrinfo.network.email</Translate></Item>
-			<Item><Key>Network Phone</Key><Translate>regrinfo.network.phone</Translate></Item>
-			<Item><Key>Network Fax</Key><Translate>regrinfo.network.fax</Translate></Item>
 		</List>
 	</Translates>
 	<Translates id="whois.rebel.com" parser="A" linestart="^\s*Domain\s" lineend="^\s*Register\syour\sdomain\s">
