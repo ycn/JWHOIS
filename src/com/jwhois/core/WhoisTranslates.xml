@@ -4071,4 +4071,81 @@
 			<Item><Key>URL</Key><Translate>regyinfo.referrer</Translate></Item>
 		</List>
 	</Translates>
+	<Translates id="whois.domain-registry.nl" parser="A" lineend="^\s*Copyright notice">
+		<Contacts>
+			<Item><Key>Registrant:</Key><Translate>regrinfo.owner</Translate></Item>
+			<Item><Key>Administrative Contact:</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical Contact</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Domain Nameservers:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+			<Item><Key>Registrar:</Key><Translate>break</Translate></Item>
+			<Item><Key>Date registered:</Key><Translate>break</Translate></Item>
+			<Item><Key>Domain Name:</Key><Translate>regrinfo.domain.name</Translate></Item>
+		</Contacts>
+		<List>
+			<Item><Key>Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Date registered</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Record last updated</Key><Translate>regrinfo.domain.updated</Translate></Item>
+			<Item><Key>Expires</Key><Translate>regrinfo.domain.expires</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.nic.as" parser="A" linestart="^\s*Name:" lineend="^\s*Access to">
+		<Contacts>
+			<Item><Key>Nameservers:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</Contacts>
+		<List>
+			<Item><Key>Name</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Registered by</Key><Translate>regrinfo.owner.name</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.nic.bi" parser="A" linestart="^\s*Domain Name:" lineend="^\s*This data is">
+		<List>
+			<Item><Key>Domain Name</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Registered by</Key><Translate>regrinfo.owner.name</Translate></Item>
+			<Item><Key>Referral URL</Key><Translate>regyinfo.referrer</Translate></Item>
+			<Item><Key>Name Server</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+			<Item><Key>Registrar</Key><Translate>regrinfo.domain.registrar,regrinfo.domain.sponsor</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.nic.cl" parser="A">
+		<Contacts>
+			<Item><Key>Administrative Contact</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical contact</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Domain servers</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+			<Item><Key>formulario</Key><Translate>break</Translate></Item>
+			<Item><Key>More information</Key><Translate>break</Translate></Item>
+			<Item><Key>Este mensajes</Key><Translate>break</Translate></Item>
+		</Contacts>
+	</Translates>
+	<Translates id="cc.whois-servers.net" parser="A" linestart="^\s*Domain Name:" lineend="^\s*>>>">
+		<List>
+			<Item><Key>whois server</Key><Translate>regyinfo.whois</Translate></Item>
+			<Item><Key>registrar</Key><Translate>regyinfo.registrar,regrinfo.domain.sponsor</Translate></Item>
+			<Item><Key>referral url</Key><Translate>regyinfo.referrer</Translate></Item>
+			<Item><Key>domain name</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>updated date</Key><Translate>regrinfo.domain.changed</Translate></Item>
+			<Item><Key>last updated on</Key><Translate>regrinfo.domain.changed</Translate></Item>
+			<Item><Key>name server</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+			<Item><Key>creation date</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>updated date</Key><Translate>regrinfo.domain.changed</Translate></Item>
+			<Item><Key>expiration date</Key><Translate>regrinfo.domain.expires</Translate></Item>
+		</List>
+	</Translates>
+	<Translates id="whois.nic.cx" parser="A" linestart="^\s*Domain Information">
+		<Contacts>
+			<Item><Key>Registrant</Key><Translate>regrinfo.owner</Translate></Item>
+			<Item><Key>Administrative Contact</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Billing Contact</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>Technical Contact</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Name Servers:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+		</Contacts>
+		<List>
+			<Item><Key>Registrar</Key><Translate>regyinfo.registrar,regrinfo.domain.sponsor</Translate></Item>
+			<Item><Key>Query</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>Status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>Created</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>Modified</Key><Translate>regrinfo.domain.changed</Translate></Item>
+			<Item><Key>Expires</Key><Translate>regrinfo.domain.expires</Translate></Item>
+		</List>
+	</Translates>
 </JWHOIS>
