@@ -42,7 +42,7 @@ public class WhoisMap {
 	 */
 
 	// line type B : key = group(1); value = group(3)
-	private final static String	REGEX_LINEB	= "^\\s*([\u0000-\u0039\u003B-\u007E]+)\\s*(:|[\\.]{3,}|\\s{5,})\\s*([^\\/][^\\/].+)\\s*$";
+	private final static String	REGEX_LINEB	= "^\\s*([\u0000-\u0039\u003B-\u007E]+)\\s*(:|[\\.]{3,}|\\s{5,})\\s*([^\\/][^\\/].*)\\s*$";
 
 	private static Pattern		pnLineB;
 
