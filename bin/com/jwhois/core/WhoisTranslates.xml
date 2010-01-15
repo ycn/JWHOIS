@@ -4079,9 +4079,9 @@
 			<Item><Key>Domain Nameservers:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
 			<Item><Key>Registrar:</Key><Translate>break</Translate></Item>
 			<Item><Key>Date registered:</Key><Translate>break</Translate></Item>
-			<Item><Key>Domain Name:</Key><Translate>regrinfo.domain.name</Translate></Item>
 		</Contacts>
 		<List>
+			<Item><Key>Domain Name:</Key><Translate>regrinfo.domain.name</Translate></Item>
 			<Item><Key>Status</Key><Translate>regrinfo.domain.status</Translate></Item>
 			<Item><Key>Date registered</Key><Translate>regrinfo.domain.created</Translate></Item>
 			<Item><Key>Record last updated</Key><Translate>regrinfo.domain.updated</Translate></Item>
