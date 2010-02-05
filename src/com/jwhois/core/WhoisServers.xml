@@ -34,7 +34,7 @@
 		<SERVER><KEY>cd</KEY><URL>whois.nic.cd</URL></SERVER>
 		<SERVER><KEY>ch</KEY><URL>whois.nic.ch</URL></SERVER>
 		<SERVER><KEY>cl</KEY><URL>whois.nic.cl</URL></SERVER>
-		<SERVER><KEY>cm</KEY><URL>register.cm</URL></SERVER>
+		<SERVER><KEY>cm</KEY><URL>netcom.cm</URL></SERVER>
 		<SERVER><KEY>cx</KEY><URL>whois.nic.cx</URL></SERVER>
 		<SERVER><KEY>cz</KEY><URL>whois.nic.cz</URL></SERVER>
 		<SERVER><KEY>de</KEY><URL>whois.nic.de?-T dn,ace {domain}</URL></SERVER>

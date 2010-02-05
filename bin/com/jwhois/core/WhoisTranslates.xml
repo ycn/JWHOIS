@@ -2628,7 +2628,7 @@
 			<Item><Key>Expires</Key><Translate>regrinfo.domain.expires</Translate></Item>
 		</List>
 	</Translates>
-	<Translates id="register.cm" parser="A" linestart="^\s*Domain\sInformation">
+	<Translates id="netcom.cm" parser="A" linestart="^\s*Domain\sInformation">
 		<Contacts>
 			<Item><Key>Registrant:</Key><Translate>regrinfo.owner</Translate></Item>
 			<Item><Key>Administrative Contact:</Key><Translate>regrinfo.admin</Translate></Item>
