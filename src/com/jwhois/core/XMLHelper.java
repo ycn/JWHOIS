@@ -39,7 +39,9 @@ public final class XMLHelper {
 		String text = "";
 		NodeList list = target.getElementsByTagName( tagName );
 		if (null != list && list.getLength() > 0) {
-			text = list.item( 0 ).getTextContent().trim();
+			Node node = list.item( 0 ).getFirstChild();
+			if (node != null && node.getNodeType() == Node.TEXT_NODE)
+				text = node.getNodeValue().trim();
 		}
 		return text;
 	}
@@ -187,7 +189,7 @@ public final class XMLHelper {
 		if (nonIcann) {
 			ret = getServerValue( "NonICANNList", tld );
 		}
-		if (ret.isEmpty()) {
+		if ("".equals( ret )) {
 			ret = getServerValue( "SpecialList", tld );
 		}
 		return ret;

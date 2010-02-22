@@ -48,7 +48,7 @@ public class WhoisEngine extends WhoisClient {
 
 			@Override
 			public boolean skipLine(String line) {
-				return line.isEmpty() || pnSkip.matcher( line ).find();
+				return "".equals( line ) || pnSkip.matcher( line ).find();
 			}
 
 			@Override

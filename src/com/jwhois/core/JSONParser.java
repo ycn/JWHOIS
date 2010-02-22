@@ -146,7 +146,7 @@ public class JSONParser {
 
 	public static String toUnicodeString(String s) {
 		StringBuilder sb = new StringBuilder();
-		if (null != s && !s.isEmpty()) {
+		if (null != s && !"".equals( s )) {
 			char[] c = s.toCharArray();
 			for (int i = 0; i < c.length; i++) {
 				if (c[i] > '\u0370') {
