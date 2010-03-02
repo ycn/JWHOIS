@@ -13,11 +13,18 @@ import java.net.SocketException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.UnknownHostException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
+
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 public class WhoisClient {
 	private static final String	DEFAULT_HOST	= "whois.internic.net";
@@ -112,6 +119,10 @@ public class WhoisClient {
 	private void httpQuery(List<String> list) {
 		URLConnection conn = null;
 		URL url = null;
+
+		if (port == 443) {
+			trustAllHosts();
+		}
 
 		try {
 			url = new URL( this.url );
@@ -244,7 +255,7 @@ public class WhoisClient {
 			}
 			else if ("https".equals( ptlStr )) {
 				ptlType = "http";
-				port = 483;
+				port = 443;
 			}
 		}
 
@@ -359,6 +370,30 @@ public class WhoisClient {
 			}
 		}
 		return null;
+	}
+
+	private void trustAllHosts() {
+		// Create a trust manager that does not validate certificate chains
+		TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
+			public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+				return new java.security.cert.X509Certificate[] {};
+			}
+
+			public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+			}
+
+			public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+			}
+		} };
+
+		// Install the all-trusting trust manager
+		try {
+			SSLContext sc = SSLContext.getInstance( "TLS" );
+			sc.init( null, trustAllCerts, new java.security.SecureRandom() );
+			HttpsURLConnection.setDefaultSSLSocketFactory( sc.getSocketFactory() );
+		}
+		catch (Exception e) {
+		}
 	}
 
 }

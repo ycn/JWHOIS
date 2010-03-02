@@ -63,7 +63,6 @@
 		<SERVER><KEY>co.za</KEY><URL>http://co.za/cgi-bin/whois.sh?Domain={domain}</URL></SERVER>
 		<SERVER><KEY>org.za</KEY><URL>http://www.org.za/cgi-bin/rwhois?domain={domain}&amp;format=full</URL></SERVER>
 		
-		<SERVER><KEY>es</KEY><URL>https://www.nic.es/esnic/esn/verValidacionWhoisAction?dominio={domain}</URL></SERVER>
 		<SERVER><KEY>fm</KEY><URL>http://www.dot.fm/query_whois.cfm?domain={domain}&amp;tld=fm</URL></SERVER>
 		<SERVER><KEY>la</KEY><URL>whois.centralnic.net</URL></SERVER>
 		<SERVER><KEY>gs</KEY><URL>http://www.adamsnames.tc/whois/?domain={domain}.gs</URL></SERVER>
