@@ -24,7 +24,6 @@ public class WhoisEngine extends WhoisClient {
 	public WhoisEngine(String domain, boolean deepWhois) {
 		this.isVaildDom = false;
 		this.domain = domain.trim().toLowerCase();
-		// this.domain = IDN.toASCII( this.domain );
 		if (!Utility.isValidDom( this.domain ))
 			return;
 		this.isVaildDom = true;
