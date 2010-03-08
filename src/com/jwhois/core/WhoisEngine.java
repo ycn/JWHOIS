@@ -98,7 +98,7 @@ public class WhoisEngine extends WhoisClient {
 					continue;
 
 				// Check if has special parameters
-				if ("com".equals( t ) || "net".equals( t )) {
+				if ("com".equals( t ) || "net".equals( t ) || ("jobs".equals( t )) || ("cc".equals( t ))) {
 					cname += "?domain ={domain}";
 				}
 				else if ("de".equals( t )) {

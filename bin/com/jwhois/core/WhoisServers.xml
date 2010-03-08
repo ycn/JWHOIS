@@ -7,7 +7,7 @@
 		<SERVER><KEY>cat</KEY><URL>whois.cat</URL></SERVER>
 		<SERVER><KEY>coop</KEY><URL>whois.nic.coop</URL></SERVER>
 		<SERVER><KEY>edu</KEY><URL>whois.educause.net</URL></SERVER>
-		<SERVER><KEY>gov</KEY><URL>break</URL></SERVER>
+		<SERVER><KEY>gov</KEY><URL>whois.nic.gov</URL></SERVER>
 		<SERVER><KEY>info</KEY><URL>whois.afilias.info</URL></SERVER>
 		<SERVER><KEY>int</KEY><URL>whois.iana.org</URL></SERVER>
 		<SERVER><KEY>mil</KEY><URL>break</URL></SERVER>
@@ -16,30 +16,40 @@
 		<SERVER><KEY>name</KEY><URL>whois.nic.name</URL></SERVER>
 		<SERVER><KEY>org</KEY><URL>whois.pir.org</URL></SERVER>
 		<SERVER><KEY>pro</KEY><URL>whois.registrypro.pro</URL></SERVER>
-		<SERVER><KEY>travel</KEY><URL>http://www.whois.travel/whois.cgi?TLD=travel&amp;dn={domain}&amp;TYPE=DOMAIN</URL></SERVER>
+		<SERVER><KEY>tel</KEY><URL>whois.nic.tel</URL></SERVER>
+		<SERVER><KEY>travel</KEY><URL>whois.nic.travel</URL></SERVER>
 		
 		<SERVER><KEY>ac</KEY><URL>http://www.nic.ac/cgi-bin/whois?textfield={domain}</URL></SERVER>
+		<SERVER><KEY>ae</KEY><URL>whois.aeda.net.ae</URL></SERVER>
 		<SERVER><KEY>af</KEY><URL>whois.nic.af</URL></SERVER>
 		<SERVER><KEY>ag</KEY><URL>whois.nic.ag</URL></SERVER>
-		<SERVER><KEY>ai</KEY><URL>http://whois.offshore.ai/cgi-bin/whois.pl?domain-name={domain}</URL></SERVER>
+		<SERVER><KEY>ai</KEY><URL>whois.ai</URL></SERVER>
 		<SERVER><KEY>am</KEY><URL>whois.nic.am</URL></SERVER>
 		<SERVER><KEY>at</KEY><URL>whois.nic.at</URL></SERVER>
 		<SERVER><KEY>as</KEY><URL>whois.nic.as</URL></SERVER>
+		<SERVER><KEY>au</KEY><URL>whois.ausregistry.net.au</URL></SERVER>
 		<SERVER><KEY>bb</KEY><URL>http://domains.org.bb/regsearch/getdetails.cfm?DND={domain}</URL></SERVER>
 		<SERVER><KEY>be</KEY><URL>whois.dns.be</URL></SERVER>
 		<SERVER><KEY>bg</KEY><URL>whois.register.bg</URL></SERVER>
 		<SERVER><KEY>bi</KEY><URL>whois.nic.bi</URL></SERVER>
 		<SERVER><KEY>bz</KEY><URL>whois2.afilias-grs.net</URL></SERVER>
 		<SERVER><KEY>ca</KEY><URL>whois.cira.ca</URL></SERVER>
+		<SERVER><KEY>cc</KEY><URL>whois.nic.cc</URL></SERVER>
 		<SERVER><KEY>cd</KEY><URL>whois.nic.cd</URL></SERVER>
 		<SERVER><KEY>ch</KEY><URL>whois.nic.ch</URL></SERVER>
+		<SERVER><KEY>ci</KEY><URL>whois.nic.ci</URL></SERVER>
 		<SERVER><KEY>cl</KEY><URL>whois.nic.cl</URL></SERVER>
-		<SERVER><KEY>cm</KEY><URL>netcom.cm</URL></SERVER>
+		<SERVER><KEY>cm</KEY><URL>register.cm</URL></SERVER>
 		<SERVER><KEY>cx</KEY><URL>whois.nic.cx</URL></SERVER>
 		<SERVER><KEY>cz</KEY><URL>whois.nic.cz</URL></SERVER>
 		<SERVER><KEY>de</KEY><URL>whois.nic.de?-T dn,ace {domain}</URL></SERVER>
 		<SERVER><KEY>dk</KEY><URL>whois.dk-hostmaster.dk?--show-handles {domain}</URL></SERVER>
 		<SERVER><KEY>ee</KEY><URL>whois.eenet.ee</URL></SERVER>
+		<SERVER><KEY>eu</KEY><URL>whois.eu</URL></SERVER>
+		<SERVER><KEY>fi</KEY><URL>whois.ficora.fi</URL></SERVER>
+		<SERVER><KEY>fj</KEY><URL>whois.usp.ac.fj</URL></SERVER>
+		<SERVER><KEY>fo</KEY><URL>whois.ripe.net</URL></SERVER>
+		<SERVER><KEY>fr</KEY><URL>whois.nic.fr</URL></SERVER>
 		<SERVER><KEY>gd</KEY><URL>whois.adamsnames.tc</URL></SERVER>
 		<SERVER><KEY>gl</KEY><URL>whois.nic.gl</URL></SERVER>
 		<SERVER><KEY>jp</KEY><URL>whois.jprs.jp?{domain}/e</URL></SERVER>
@@ -56,6 +66,31 @@
 		<SERVER><KEY>tf</KEY><URL>whois.adamsnames.tc</URL></SERVER>
 		<SERVER><KEY>us</KEY><URL>whois.nic.us</URL></SERVER>
 		
+		<SERVER><KEY>ae.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>br.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>cn.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>de.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>eu.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>gb.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>gb.net</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>hu.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>kr.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>no.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>qc.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>ru.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>sa.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>se.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>se.net</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>uk.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>uk.net</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>us.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>uy.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>za.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>jpn.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>web.com</KEY><URL>whois.grs.centralnic.com</URL></SERVER>
+		<SERVER><KEY>za.net</KEY><URL>whois.za.net</URL></SERVER>
+		<SERVER><KEY>eu.org</KEY><URL>whois.eu.org</URL></SERVER>
+		<SERVER><KEY>za.org</KEY><URL>whois.za.org</URL></SERVER>
 		<SERVER><KEY>co.cm</KEY><URL>whois.coccaregistry.net</URL></SERVER>
 		<SERVER><KEY>com.cm</KEY><URL>whois.coccaregistry.net</URL></SERVER>
 		<SERVER><KEY>edu.cm</KEY><URL>whois.coccaregistry.net</URL></SERVER>
@@ -73,29 +108,6 @@
 		<SERVER><KEY>ve</KEY><URL>whois.nic.ve</URL></SERVER>
 		<SERVER><KEY>vg</KEY><URL>http://www.adamsnames.tc/whois/?domain={domain}.vg</URL></SERVER>
 		<SERVER><KEY>net.au</KEY><URL>whois.aunic.net</URL></SERVER>
-		<SERVER><KEY>ae.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>br.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>cn.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>de.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>eu.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>hu.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>jpn.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>kr.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>gb.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>no.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>qc.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>ru.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>sa.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>se.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>za.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>uk.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>us.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>uy.com</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>gb.net</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>se.net</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>uk.net</KEY><URL>whois.centralnic.net</URL></SERVER>
-		<SERVER><KEY>za.net</KEY><URL>whois.za.net</URL></SERVER>
-		<SERVER><KEY>za.org</KEY><URL>whois.za.net</URL></SERVER>
 	</SpecialList>
 	<NonICANNList>
 		<SERVER><KEY>agent</KEY><URL>http://www.new.net/search_whois.tp?domain={domain}&amp;tld={tld}</URL></SERVER>
