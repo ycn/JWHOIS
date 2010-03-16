@@ -13,7 +13,11 @@ public final class XMLHelper {
 		buildServers();
 		buildTranslates();
 	}
-	
+
+	public static boolean isLoad() {
+		return (servers != null && translates != null && !servers.isEmpty() && !translates.isEmpty());
+	}
+
 	public static void clean() {
 		servers = null;
 		translates = null;
