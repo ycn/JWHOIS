@@ -13,6 +13,11 @@ public final class XMLHelper {
 		buildServers();
 		buildTranslates();
 	}
+	
+	public static void clean() {
+		servers = null;
+		translates = null;
+	}
 
 	private static void buildServers() {
 		if (servers != null)
