@@ -86,7 +86,7 @@ public final class XMLHelper {
 			buildServers();
 		}
 		if (null != servers) {
-			Map<String, String> map = servers.get( listname.toLowerCase() );
+			Map<String, String> map = servers.get( listname );
 			if (!Utility.isEmpty( map ) && !map.isEmpty()) {
 				for (String key : map.keySet()) {
 					ret = map.get( key );
