@@ -1093,34 +1093,18 @@
 			<Item><Key>Expiration Date</Key><Translate>regrinfo.domain.expires</Translate></Item>
 		</List>
 	</Translates>
-	<Translates id="whois.register.com" parser="A" linestart="^\s*Organization:" lineend="^\s*Visit\sAboutUs.org\sfor">
+	<Translates id="whois.register.com" parser="A" linestart="^\s*Registrant:" lineend="^\s*Visit\sAboutUs.org\sfor">
 		<Contacts>
-			<Item><Key>Organization</Key><Translate>regrinfo.owner</Translate></Item>
-			<Item><Key>Administrative Contact</Key><Translate>regrinfo.admin</Translate></Item>
-			<Item><Key>Technical Contact</Key><Translate>regrinfo.tech</Translate></Item>
-			<Item><Key>Billing Contact</Key><Translate>regrinfo.bill</Translate></Item>
-			<Item><Key>Zone Contact</Key><Translate>regrinfo.zone</Translate></Item>
-			<Item><Key>Abuse Contact</Key><Translate>regrinfo.abuse</Translate></Item>
-			<Item><Key>Network Contact</Key><Translate>regrinfo.network</Translate></Item>
-			<Item><Key>Domain servers in listed order:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+			<Item><Key>Registrant:</Key><Translate>regrinfo.owner</Translate></Item>
+			<Item><Key>Administrative Contact:</Key><Translate>regrinfo.admin</Translate></Item>
+			<Item><Key>Technical Contact:</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Billing Contact:</Key><Translate>regrinfo.bill</Translate></Item>
+			<Item><Key>Zone Contact:</Key><Translate>regrinfo.zone</Translate></Item>
+			<Item><Key>DNS Servers:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
 			<Item><Key>Registrar Name....</Key><Translate>break</Translate></Item>
 			<Item><Key>Domain Name</Key><Translate>break</Translate></Item>
 			<Item><Key>Created on..............</Key><Translate>break</Translate></Item>
 		</Contacts>
-		<ContactInfo>
-			<Item><Key>Name</Key><Translate>name</Translate></Item>
-			<Item><Key>organization</Key><Translate>organization</Translate></Item>
-			<Item><Key>organisation</Key><Translate>organization</Translate></Item>
-			<Item><Key>Address</Key><Translate>address</Translate></Item>
-			<Item><Key>Pcode</Key><Translate>address</Translate></Item>
-			<Item><Key>City</Key><Translate>address</Translate></Item>
-			<Item><Key>Country</Key><Translate>address</Translate></Item>
-			<Item><Key>Changed</Key><Translate>changed</Translate></Item>
-			<Item><Key>Expires</Key><Translate>expires</Translate></Item>
-			<Item><Key>Phone</Key><Translate>phone</Translate></Item>
-			<Item><Key>Fax..</Key><Translate>fax</Translate></Item>
-			<Item><Key>Email</Key><Translate>email</Translate></Item>
-		</ContactInfo>
 		<List>
 			<Item><Key>Registrar Name....</Key><Translate>regyinfo.registrar,regrinfo.domain.sponsor</Translate></Item>
 			<Item><Key>Domain Name</Key><Translate>regrinfo.domain.name</Translate></Item>
