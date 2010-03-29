@@ -1097,7 +1097,7 @@
 		<Contacts>
 			<Item><Key>Registrant:</Key><Translate>regrinfo.owner</Translate></Item>
 			<Item><Key>Administrative Contact:</Key><Translate>regrinfo.admin</Translate></Item>
-			<Item><Key>Technical Contact:</Key><Translate>regrinfo.tech</Translate></Item>
+			<Item><Key>Technical  Contact:</Key><Translate>regrinfo.tech</Translate></Item>
 			<Item><Key>Billing Contact:</Key><Translate>regrinfo.bill</Translate></Item>
 			<Item><Key>Zone Contact:</Key><Translate>regrinfo.zone</Translate></Item>
 			<Item><Key>DNS Servers:</Key><Translate>regrinfo.domain.nserver</Translate></Item>
