@@ -4444,4 +4444,66 @@
 			<Item><Key>nserver</Key><Translate>regrinfo.domain.nserver</Translate></Item>
 		</List>
 	</Translates>
+	<Translates id="whois.schlund.info" parser="A" linestart="^\s*domain:" lineend="^\s*%\s">
+		<List>
+			<Item><Key>domain</Key><Translate>regrinfo.domain.name</Translate></Item>
+			<Item><Key>status</Key><Translate>regrinfo.domain.status</Translate></Item>
+			<Item><Key>created</Key><Translate>regrinfo.domain.created</Translate></Item>
+			<Item><Key>last-changed</Key><Translate>regrinfo.domain.changed</Translate></Item>
+			<Item><Key>registration-expiration</Key><Translate>regrinfo.domain.expires</Translate></Item>
+			<Item><Key>nserver</Key><Translate>regrinfo.domain.nserver</Translate></Item>
+			<Item><Key>registrant-firstname</Key><Translate>regrinfo.owner.name</Translate></Item>
+			<Item><Key>registrant-lastname</Key><Translate>regrinfo.owner.name</Translate></Item>
+			<Item><Key>registrant-organization</Key><Translate>regrinfo.owner.organization</Translate></Item>
+			<Item><Key>registrant-street1</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>registrant-street2</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>registrant-street3</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>registrant-city</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>registrant-state</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>registrant-pcode</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>registrant-ccode</Key><Translate>regrinfo.owner.address</Translate></Item>
+			<Item><Key>registrant-phone</Key><Translate>regrinfo.owner.phone</Translate></Item>
+			<Item><Key>registrant-fax</Key><Translate>regrinfo.owner.fax</Translate></Item>
+			<Item><Key>registrant-email</Key><Translate>regrinfo.owner.email</Translate></Item>
+			<Item><Key>admin-c-firstname</Key><Translate>regrinfo.admin.name</Translate></Item>
+			<Item><Key>admin-c-lastname</Key><Translate>regrinfo.admin.name</Translate></Item>
+			<Item><Key>admin-c-organization</Key><Translate>regrinfo.admin.organization</Translate></Item>
+			<Item><Key>admin-c-street1</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>admin-c-street2</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>admin-c-street3</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>admin-c-city</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>admin-c-state</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>admin-c-pcode</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>admin-c-ccode</Key><Translate>regrinfo.admin.address</Translate></Item>
+			<Item><Key>admin-c-phone</Key><Translate>regrinfo.admin.phone</Translate></Item>
+			<Item><Key>admin-c-fax</Key><Translate>regrinfo.admin.fax</Translate></Item>
+			<Item><Key>admin-c-email</Key><Translate>regrinfo.admin.email</Translate></Item>
+			<Item><Key>tech-c-firstname</Key><Translate>regrinfo.tech.name</Translate></Item>
+			<Item><Key>tech-c-lastname</Key><Translate>regrinfo.tech.name</Translate></Item>
+			<Item><Key>tech-c-organization</Key><Translate>regrinfo.tech.organization</Translate></Item>
+			<Item><Key>tech-c-street1</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>tech-c-street2</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>tech-c-street3</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>tech-c-city</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>tech-c-state</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>tech-c-pcode</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>tech-c-ccode</Key><Translate>regrinfo.tech.address</Translate></Item>
+			<Item><Key>tech-c-phone</Key><Translate>regrinfo.tech.phone</Translate></Item>
+			<Item><Key>tech-c-fax</Key><Translate>regrinfo.tech.fax</Translate></Item>
+			<Item><Key>tech-c-email</Key><Translate>regrinfo.tech.email</Translate></Item>
+			<Item><Key>bill-c-firstname</Key><Translate>regrinfo.bill.name</Translate></Item>
+			<Item><Key>bill-c-lastname</Key><Translate>regrinfo.bill.name</Translate></Item>
+			<Item><Key>bill-c-organization</Key><Translate>regrinfo.bill.organization</Translate></Item>
+			<Item><Key>bill-c-street1</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>bill-c-street2</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>bill-c-street3</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>bill-c-city</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>bill-c-state</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>bill-c-pcode</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>bill-c-ccode</Key><Translate>regrinfo.bill.address</Translate></Item>
+			<Item><Key>bill-c-phone</Key><Translate>regrinfo.bill.phone</Translate></Item>
+			<Item><Key>bill-c-fax</Key><Translate>regrinfo.bill.fax</Translate></Item>
+			<Item><Key>bill-c-email</Key><Translate>regrinfo.bill.email</Translate></Item>
+		</List>
+	</Translates>
 </JWHOIS>
