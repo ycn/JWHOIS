@@ -28,6 +28,7 @@ public class Utility {
 	public static final String	REGEXP_IP			= "(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
 
 	private static Logger		logger;
+	private static IProxy		proxyFactory;
 
 	// Default Global Settings
 	private static final String	WHOIS_SERVERS_DB	= "WhoisServers.xml";
@@ -63,7 +64,6 @@ public class Utility {
 		return ((null == arr) || arr.length == 0);
 	}
 
-	
 	/**
 	 * check if a List<?> is empty
 	 * 
@@ -200,6 +200,16 @@ public class Utility {
 	 */
 	public static void setLogger(Logger l) {
 		logger = l;
+	}
+
+	public static void setProxyFactory(IProxy p) {
+		proxyFactory = p;
+	}
+
+	public static String getProxy() {
+		if (proxyFactory == null)
+			return null;
+		return proxyFactory.getProxy();
 	}
 
 	public static void logErr(String title, Exception e) {

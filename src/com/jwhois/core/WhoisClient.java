@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.MalformedURLException;
+import java.net.Proxy;
 import java.net.Socket;
 import java.net.SocketAddress;
 import java.net.SocketException;
@@ -357,7 +358,17 @@ public class WhoisClient {
 		int retryTimes = 0;
 		while (retryTimes < 6) {
 			try {
-				sock = new Socket();
+				String ps = Utility.getProxy();
+				if (null != ps) {
+					String[] ss = ps.split( ":" );
+					if (ss.length > 1) {
+						Proxy p = new Proxy( Proxy.Type.SOCKS, new InetSocketAddress( ss[0], Integer.parseInt( ss[1] ) ) );
+						sock = new Socket( p );
+					}
+				}
+				else {
+					sock = new Socket();
+				}
 				sock.connect( addr, 1000 );
 			}
 			catch (Exception e) {
