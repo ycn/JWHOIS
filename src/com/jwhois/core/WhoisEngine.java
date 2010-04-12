@@ -126,31 +126,21 @@ public class WhoisEngine extends WhoisClient {
 		setLineEndFilter( XMLHelper.getTranslateAttr( "LineEnd", servername ) );
 		setLineCatchFilter( XMLHelper.getTranslateAttr( "LineCatch", servername ) );
 
-		// Get the raw data
-		List<String> rawdata = domLookup( domain, tld );
-		if (Utility.isEmpty( rawdata )) {
-			setServer( XMLHelper.getCommonServer() );
-			servername = hostname;
-			setLineStartFilter( XMLHelper.getTranslateAttr( "LineStart", servername ) );
-			setLineEndFilter( XMLHelper.getTranslateAttr( "LineEnd", servername ) );
-			setLineCatchFilter( XMLHelper.getTranslateAttr( "LineCatch", servername ) );
-			rawdata = domLookup( domain, tld );
-			if (Utility.isEmpty( rawdata )) {
-				return whoisMap;
-			}
-		}
-
-		whoisMap.set( "rawdata", rawdata );
-
 		// Set the necessary fields
 		whoisMap.set( "regyinfo.type", "domain" );
 		whoisMap.set( "regyinfo.domain", domain );
 		whoisMap.set( "regrinfo.domain.name", domain );
-
 		List<String> serverList = new ArrayList<String>();
 		whoisMap.set( "regyinfo.servers", serverList );
-
 		serverList.add( servername );
+		
+		// Get the raw data
+		List<String> rawdata = domLookup( domain, tld );
+		if (Utility.isEmpty( rawdata )) {
+			return whoisMap;
+		}
+
+		whoisMap.set( "rawdata", rawdata );
 
 		// Parse the map 1st.
 		String deepServer = "";
