@@ -91,10 +91,10 @@
 		<SERVER><KEY>za.net</KEY><URL>whois.za.net</URL></SERVER>
 		<SERVER><KEY>eu.org</KEY><URL>whois.eu.org</URL></SERVER>
 		<SERVER><KEY>za.org</KEY><URL>whois.za.org</URL></SERVER>
-		<SERVER><KEY>co.cm</KEY><URL>whois.coccaregistry.net</URL></SERVER>
-		<SERVER><KEY>com.cm</KEY><URL>whois.coccaregistry.net</URL></SERVER>
-		<SERVER><KEY>edu.cm</KEY><URL>whois.coccaregistry.net</URL></SERVER>
-		<SERVER><KEY>net.cm</KEY><URL>whois.coccaregistry.net</URL></SERVER>
+		<SERVER><KEY>co.cm</KEY><URL>netcom.cm</URL></SERVER>
+		<SERVER><KEY>com.cm</KEY><URL>netcom.cm</URL></SERVER>
+		<SERVER><KEY>edu.cm</KEY><URL>netcom.cm</URL></SERVER>
+		<SERVER><KEY>net.cm</KEY><URL>netcom.cm</URL></SERVER>
 		<SERVER><KEY>co.za</KEY><URL>http://co.za/cgi-bin/whois.sh?Domain={domain}</URL></SERVER>
 		<SERVER><KEY>org.za</KEY><URL>http://www.org.za/cgi-bin/rwhois?domain={domain}&amp;format=full</URL></SERVER>
 		
