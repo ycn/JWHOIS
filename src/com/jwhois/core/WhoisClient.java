@@ -44,6 +44,7 @@ public class WhoisClient {
 	private Pattern				pnCatch;
 
 	private LineFilter			filter;
+	private String				proxy;
 
 	// Constructor
 	public WhoisClient() {
@@ -358,9 +359,9 @@ public class WhoisClient {
 		int retryTimes = 0;
 		while (retryTimes < 6) {
 			try {
-				String ps = Utility.getProxy();
-				if (null != ps) {
-					String[] ss = ps.split( ":" );
+				proxy = Utility.getProxy();
+				if (null != proxy) {
+					String[] ss = proxy.split( ":" );
 					if (ss.length > 1) {
 						Proxy p = new Proxy( Proxy.Type.SOCKS, new InetSocketAddress( ss[0], Integer.parseInt( ss[1] ) ) );
 						sock = new Socket( p );
@@ -381,6 +382,10 @@ public class WhoisClient {
 			}
 		}
 		return null;
+	}
+	
+	public String getProxy() {
+		return proxy;
 	}
 
 	private void trustAllHosts() {
