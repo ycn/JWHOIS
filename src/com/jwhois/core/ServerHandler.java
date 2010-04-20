@@ -1,7 +1,7 @@
 package com.jwhois.core;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
@@ -57,13 +57,13 @@ public class ServerHandler extends DefaultHandler {
 		}
 
 		if (test.equals( ROOT )) {
-			map = new HashMap<String, Map<String, String>>();
+			map = new Hashtable<String, Map<String, String>>();
 		}
 		if (map == null) {
 			return;
 		}
 		if (LISTNAME.contains( test )) {
-			submap = new HashMap<String, String>();
+			submap = new Hashtable<String, String>();
 			map.put( test, submap );
 		}
 		else if (test.equals( ITEM ) && submap != null) {

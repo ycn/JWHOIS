@@ -365,6 +365,7 @@ public class WhoisClient {
 					if (ss.length > 1) {
 						Proxy p = new Proxy( Proxy.Type.SOCKS, new InetSocketAddress( ss[0], Integer.parseInt( ss[1] ) ) );
 						sock = new Socket( p );
+						sock.setSoTimeout( DEFAULT_TIMEOUT );
 					}
 				}
 				else {
