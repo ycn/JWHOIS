@@ -206,6 +206,12 @@ public class Utility {
 		proxyFactory = p;
 	}
 
+	public static boolean hasProxyFactory() {
+		if (proxyFactory != null)
+			return true;
+		return false;
+	}
+	
 	public static String getProxy() {
 		if (proxyFactory == null)
 			return null;

@@ -146,6 +146,10 @@ public class WhoisEngine extends WhoisClient {
 		String deepServer = "";
 		whoisMap.parse( servername );
 		deepServer = whoisMap.deepServer();
+		
+		if (!Utility.isEmpty( deepServer ) && Utility.hasProxyFactory()) {
+			whoisMap.remove( "rawdata" );
+		}
 
 		boolean hasWhoisRecord = (null == whoisMap.get( "regyinfo.hasrecord" ))
 				? false
