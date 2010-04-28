@@ -61,92 +61,99 @@ public class WhoisEngine extends WhoisClient {
 	 * 
 	 * @return the WhoisMap
 	 */
+	@SuppressWarnings("unchecked")
 	public WhoisMap build() {
 		if (!isVaildDom)
 			return null;
 
-		if (null != whoisMap)
-			return whoisMap;
+		if (null == whoisMap)
+			whoisMap = new WhoisMap();
 
-		whoisMap = new WhoisMap();
-
-		// Build array of all possible tld's for that domain
-		List<String> tldtest = Utility.buildTLDs( domain );
-
-		// Test in special list first
+		String servername = "";
 		String server = "";
 		String tld = "";
-		for (String t : tldtest) {
-			String s = XMLHelper.getSpecialServer( t, nonIcann );
-			if (!Utility.isEmpty( s )) {
-				if (s.equals( "break" ))
-					return whoisMap;
-				server = s;
-				tld = t;
-				this.deepWhois = false;
-				break;
-			}
-		}
+		List<String> rawdata = null;
 
-		// Test with default server
-		if (Utility.isEmpty( server )) {
-			String cname = null;
+		if (Utility.isEmpty( whoisMap.deepServer() )) {
+
+			// Build array of all possible tld's for that domain
+			List<String> tldtest = Utility.buildTLDs( domain );
+
+			// Test in special list first
 			for (String t : tldtest) {
-				cname = t + DEFAULT_SERVER_DOMAIN;
-
-				if (Utility.isEmpty( Utility.getAddressbyName( cname ) ))
-					continue;
-
-				// Check if has special parameters
-				if ("com".equals( t ) || "net".equals( t ) || ("jobs".equals( t )) || ("cc".equals( t ))) {
-					cname += "?domain ={domain}";
+				String s = XMLHelper.getSpecialServer( t, nonIcann );
+				if (!Utility.isEmpty( s )) {
+					if (s.equals( "break" ))
+						return whoisMap;
+					server = s;
+					tld = t;
+					this.deepWhois = false;
+					break;
 				}
-				else if ("de".equals( t )) {
-					cname += "?-T dn,ace {domain}";
-				}
-
-				server = cname;
-				tld = t;
-				break;
 			}
+
+			// Test with default server
+			if (Utility.isEmpty( server )) {
+				String cname = null;
+				for (String t : tldtest) {
+					cname = t + DEFAULT_SERVER_DOMAIN;
+
+					if (Utility.isEmpty( Utility.getAddressbyName( cname ) ))
+						continue;
+
+					// Check if has special parameters
+					if ("com".equals( t ) || "net".equals( t ) || ("jobs".equals( t )) || ("cc".equals( t ))) {
+						cname += "?domain ={domain}";
+					}
+					else if ("de".equals( t )) {
+						cname += "?-T dn,ace {domain}";
+					}
+
+					server = cname;
+					tld = t;
+					break;
+				}
+			}
+
+			if (Utility.isEmpty( server ) || Utility.isEmpty( tld )) {
+				// return an empty map
+				return whoisMap;
+			}
+
+			// Set the server
+			setServer( server );
+
+			servername = hostname;
+
+			// Set if has LineStart or LineEnd pattern
+			setLineStartFilter( XMLHelper.getTranslateAttr( "LineStart", servername ) );
+			setLineEndFilter( XMLHelper.getTranslateAttr( "LineEnd", servername ) );
+			setLineCatchFilter( XMLHelper.getTranslateAttr( "LineCatch", servername ) );
+
+			// Set the necessary fields
+			whoisMap.set( "regyinfo.type", "domain" );
+			whoisMap.set( "regyinfo.domain", domain );
+			whoisMap.set( "regrinfo.domain.name", domain );
+			List<String> serverList = new ArrayList<String>();
+			whoisMap.set( "regyinfo.servers", serverList );
+			serverList.add( servername );
+
+			// Get the raw data
+			rawdata = domLookup( domain, tld );
+			if (Utility.isEmpty( rawdata )) {
+				return whoisMap;
+			}
+
+			whoisMap.set( "rawdata", rawdata );
+
+			// Parse the map 1st.
+			whoisMap.parse( servername );
 		}
 
-		if (Utility.isEmpty( server ) || Utility.isEmpty( tld )) {
-			// return an empty map
-			return whoisMap;
-		}
+		List<String> serverList = ( List<String> ) whoisMap.get( "regyinfo.servers" );
 
-		// Set the server
-		setServer( server );
+		String deepServer = whoisMap.deepServer();
 
-		String servername = hostname;
-
-		// Set if has LineStart or LineEnd pattern
-		setLineStartFilter( XMLHelper.getTranslateAttr( "LineStart", servername ) );
-		setLineEndFilter( XMLHelper.getTranslateAttr( "LineEnd", servername ) );
-		setLineCatchFilter( XMLHelper.getTranslateAttr( "LineCatch", servername ) );
-
-		// Set the necessary fields
-		whoisMap.set( "regyinfo.type", "domain" );
-		whoisMap.set( "regyinfo.domain", domain );
-		whoisMap.set( "regrinfo.domain.name", domain );
-		List<String> serverList = new ArrayList<String>();
-		whoisMap.set( "regyinfo.servers", serverList );
-		serverList.add( servername );
-		
-		// Get the raw data
-		List<String> rawdata = domLookup( domain, tld );
-		if (Utility.isEmpty( rawdata )) {
-			return whoisMap;
-		}
-
-		whoisMap.set( "rawdata", rawdata );
-
-		// Parse the map 1st.
-		String deepServer = "";
-		whoisMap.parse( servername );
-		deepServer = whoisMap.deepServer();
-		
 		if (!Utility.isEmpty( deepServer ) && Utility.hasProxyFactory()) {
 			whoisMap.remove( "rawdata" );
 		}
@@ -156,11 +163,11 @@ public class WhoisEngine extends WhoisClient {
 				: ( Boolean ) whoisMap.get( "regyinfo.hasrecord" );
 
 		// If set deepWhois, do deep whois query.
-		while (deepWhois && !Utility.isEmpty( deepServer )) {
+		if (deepWhois && !Utility.isEmpty( deepServer )) {
 			setServer( deepServer );
 
 			if (hostname.equals( servername ))
-				break;
+				return whoisMap;
 
 			servername = hostname;
 			setLineStartFilter( XMLHelper.getTranslateAttr( "LineStart", servername ) );
@@ -169,7 +176,7 @@ public class WhoisEngine extends WhoisClient {
 
 			rawdata = domLookup( domain, tld );
 			if (Utility.isEmpty( rawdata ))
-				break;
+				return whoisMap;
 
 			whoisMap.remove( "regrinfo.domain" );
 			whoisMap.remove( "regyinfo.whois" );

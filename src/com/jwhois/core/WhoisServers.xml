@@ -212,7 +212,7 @@
 		<SERVER><KEY>GoDaddy</KEY><URL>common</URL></SERVER>
 	</RegistrarList>
 	<RedirectList>
-		<SERVER><KEY>whois.wildwestdomains.com</KEY><URL>break</URL></SERVER>
+		<SERVER><KEY>whois.wildwestdomains.com</KEY><URL>common</URL></SERVER>
 		<SERVER><KEY>whois.website.ws</KEY><URL>break</URL></SERVER>
 		<SERVER><KEY>whois.godaddy.com</KEY><URL>common</URL></SERVER>
 		<SERVER><KEY>who.godaddy.com</KEY><URL>common</URL></SERVER>
