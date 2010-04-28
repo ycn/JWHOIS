@@ -553,16 +553,16 @@ public class WhoisMap {
 		if (null == sObj)
 			return null;
 
-		String leftKey = "";
+		String rightKey = "";
 		int pos = key.indexOf( '.' );
 		if (pos != -1)
-			leftKey = key.substring( pos + 1 );
+			rightKey = key.substring( pos + 1 );
 
 		if (keys.length > 1 && sObj instanceof Map) {
-			return new WhoisMap( ( Map<String, Object> ) sObj ).remove( leftKey );
+			return new WhoisMap( ( Map<String, Object> ) sObj ).remove( rightKey );
 		}
 
-		if (!Utility.isEmpty( leftKey ))
+		if (Utility.isEmpty( rightKey ))
 			whoisMap.remove( sKey );
 
 		return sObj;
